@@ -1,0 +1,321 @@
+---
+title: "todiramphus.maps"
+author: "Devon DeRaad"
+date: "4/5/2022"
+output: html_document
+---
+
+```{r}
+#remotes::install_github("wmgeolab/rgeoboundaries")
+#load packages
+library(vcfR)
+library(ggplot2)
+#library(adegenet)
+#library(SNPfiltR)
+#library(StAMPP)
+#library(viridis)
+library(rgeoboundaries)
+library(elevatr)
+library(raster)
+#library(sf)
+#library(ggpubr)
+library(RColorBrewer)
+library(gridExtra)
+```
+
+```{r}
+#read in sample info csv
+sample.info<-read.csv("~/Desktop/todi.2022/todiramphus.subset.csv")
+
+#read in filtered vcf
+vcfR <- read.vcfR("~/Desktop/todi.2022/todi.unlinked.85.vcf")
+
+#reorder sampling df to match order of the retained samples in the vcf
+sample.info<-sample.info[match(colnames(vcfR@gt)[-1], sample.info$id),]
+sample.info$id == colnames(vcfR@gt)[-1]
+```
+
+```{r}
+#split df by species
+spec.dfs<-split(sample.info, sample.info$species)
+
+#init sampling.df which will be a df of samples grouped by unique lat/long
+sampling.df<-data.frame(NULL)
+for (i in names(spec.dfs)){
+  samps<-spec.dfs[[i]] %>% dplyr::group_by(lat, lon) %>% dplyr::summarize(count=dplyr::n())
+  df<-cbind(rep(i, times=nrow(samps)), samps)
+  sampling.df<-as.data.frame(rbind(sampling.df, df))
+}
+
+#fix colnames
+colnames(sampling.df)<-c("species","lat","long","count")
+
+#make map#
+pac<-map_data("world")
+#
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(95, 177), ylim = c(-40, 20)) + 
+  geom_point(data = sampling.df, aes(x = long, y = lat, col=species, size=count), alpha =.9, show.legend=TRUE) +
+  theme_classic()+
+  scale_color_manual(values=brewer.pal(8, "Set2"))+
+  scale_size_continuous(range = c(1,5))+
+  guides(colour = guide_legend(override.aes = list(size = 4), order=1, label.theme = element_text(face = "italic")),
+         size = guide_legend(nrow = 1, order = 2))+
+  theme(legend.position = c(0.5, 0.5), legend.justification = c(0.01, 0.01))
+
+#save
+p<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(95, 177), ylim = c(-40, 20)) + 
+  geom_point(data = sampling.df, aes(x = long, y = lat, col=species, size=count), alpha =.9, show.legend=TRUE) +
+  theme_classic()+
+  scale_color_manual(values=brewer.pal(8, "Set2"))+
+  scale_size_continuous(range = c(1,5))+
+  guides(colour = guide_legend(override.aes = list(size = 4), order=1, label.theme = element_text(face = "italic")),
+         size = guide_legend(nrow = 1, order = 2))+
+  theme(legend.position = c(0.1, 0.1), legend.justification = c(0.01, 0.01))
+
+#save the legend
+leg<-ggpubr::get_legend(p)
+l<-ggpubr::as_ggplot(leg)
+```
+
+### make full sampling map
+```{r}
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="black", col="black", cex=.1)+
+  coord_sf(xlim = c(95, 177), ylim = c(-40, 20)) + 
+  #geom_point(data = sampling.df, aes(x = long, y = lat, col=species, size=count), alpha =.9, show.legend=TRUE) +
+  theme_classic()+
+  guides(colour = guide_legend(override.aes = list(size = 4), order=1, label.theme = element_text(face = "italic")),
+         size = guide_legend(nrow = 1, order = 2))+
+  theme(legend.position = c(0.5, 0.5), legend.justification = c(0.01, 0.01))+
+  geom_rect(aes(xmin = 144, xmax = 147, ymin = 12, ymax = 20), lwd=1, color=brewer.pal(8, "Set2")[1], fill=NA)+
+  geom_rect(aes(xmin = 95, xmax = 132, ymin = -11, ymax = 20), lwd=1, color=brewer.pal(8, "Set2")[2], fill=NA)+
+  geom_rect(aes(xmin = 150, xmax = 153.2, ymin = -11, ymax = -8), lwd=1, color=brewer.pal(8, "Set2")[3], fill=NA)+
+  geom_rect(aes(xmin = 155, xmax = 161, ymin = -10, ymax = -6), lwd=1, color=brewer.pal(8, "Set2")[4], fill=NA)+
+  geom_rect(aes(xmin = 113, xmax = 177, ymin = -42, ymax = -5), lwd=1, color=brewer.pal(8, "Set2")[5], fill=NA)+
+  geom_rect(aes(xmin = 126, xmax = 162, ymin = -12, ymax = 3), lwd=1, color=brewer.pal(8, "Set2")[6], fill=NA)+
+  geom_rect(aes(xmin = 112, xmax = 155, ymin = -30, ymax = -10), lwd=1, color=brewer.pal(8, "Set2")[7], fill=NA)+
+  geom_rect(aes(xmin = 147, xmax = 167, ymin = -11.5, ymax = -2), lwd=1, color=brewer.pal(8, "Set2")[8], fill=NA)
+
+
+#save
+full.map<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="black", col="black", cex=.1)+
+  coord_sf(xlim = c(95, 177), ylim = c(-40, 20)) + 
+  #geom_point(data = sampling.df, aes(x = long, y = lat, col=species, size=count), alpha =.9, show.legend=TRUE) +
+  theme_classic()+
+  guides(colour = guide_legend(override.aes = list(size = 4), order=1, label.theme = element_text(face = "italic")),
+         size = guide_legend(nrow = 1, order = 2))+
+  theme(legend.position = c(0.5, 0.5), legend.justification = c(0.01, 0.01))+
+  geom_rect(aes(xmin = 144, xmax = 147, ymin = 12, ymax = 20), lwd=1, color=brewer.pal(8, "Set2")[1], fill=NA)+
+  geom_rect(aes(xmin = 95, xmax = 132, ymin = -11, ymax = 20), lwd=1, color=brewer.pal(8, "Set2")[2], fill=NA)+
+  geom_rect(aes(xmin = 150, xmax = 153.2, ymin = -11, ymax = -8), lwd=1, color=brewer.pal(8, "Set2")[3], fill=NA)+
+  geom_rect(aes(xmin = 155, xmax = 161, ymin = -10, ymax = -6), lwd=1, color=brewer.pal(8, "Set2")[4], fill=NA)+
+  geom_rect(aes(xmin = 113, xmax = 177, ymin = -42, ymax = -5), lwd=1, color=brewer.pal(8, "Set2")[5], fill=NA)+
+  geom_rect(aes(xmin = 126, xmax = 162, ymin = -12, ymax = 3), lwd=1, color=brewer.pal(8, "Set2")[6], fill=NA)+
+  geom_rect(aes(xmin = 112, xmax = 155, ymin = -30, ymax = -10), lwd=1, color=brewer.pal(8, "Set2")[7], fill=NA)+
+  geom_rect(aes(xmin = 147, xmax = 167, ymin = -11.5, ymax = -2), lwd=1, color=brewer.pal(8, "Set2")[8], fill=NA)
+```
+
+### make albicilla map
+```{r}
+#
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(142, 148), ylim = c(12, 20)) + 
+  geom_point(data = sampling.df[sampling.df$species == "albicilla",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[1])+
+  theme_classic()+
+  scale_size_continuous(range = c(2,4))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+#save
+alb<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(143, 147), ylim = c(13, 19)) + 
+  geom_point(data = sampling.df[sampling.df$species == "albicilla",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[1])+
+  theme_classic()+
+  scale_size_continuous(range = c(2,4))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+```
+
+
+### make chloris map
+```{r}
+#
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(95, 138), ylim = c(-15, 20)) + 
+  geom_point(data = sampling.df[sampling.df$species == "chloris",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[2])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+#save
+chlor<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(95, 138), ylim = c(-15, 20)) + 
+  geom_point(data = sampling.df[sampling.df$species == "chloris",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[2])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+```
+
+### make tristrami map
+```{r}
+#
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(146, 167), ylim = c(-12, -2)) + 
+  geom_point(data = sampling.df[sampling.df$species == "tristrami",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[8])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+#save
+tris<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(148, 167), ylim = c(-12, -2)) + 
+  geom_point(data = sampling.df[sampling.df$species == "tristrami",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[8])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+```
+
+### make saurophagus map
+```{r}
+#
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(127, 162), ylim = c(-12, 2)) + 
+  geom_point(data = sampling.df[sampling.df$species == "saurophagus",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[6])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+#save
+saur<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(127, 162), ylim = c(-12, 2)) + 
+  geom_point(data = sampling.df[sampling.df$species == "saurophagus",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[6])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+```
+
+### make colonus map
+```{r}
+#
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(148, 156), ylim = c(-12.5, -5)) + 
+  geom_point(data = sampling.df[sampling.df$species == "colonus",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[3])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+#save
+colonus<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(149, 155), ylim = c(-12, -7)) + 
+  geom_point(data = sampling.df[sampling.df$species == "colonus",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[3])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+```
+
+### make sordidus map
+```{r}
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(114, 158), ylim = c(-40, -8)) + 
+  geom_point(data = sampling.df[sampling.df$species == "sordidus",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[7])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,4))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+#save
+sord<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(114, 155), ylim = c(-40, -8)) + 
+  geom_point(data = sampling.df[sampling.df$species == "sordidus",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[7])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,4))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+```
+
+### make sanctus map
+```{r}
+#
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(116, 180), ylim = c(-46, 0)) + 
+  geom_point(data = sampling.df[sampling.df$species == "sanctus",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[5])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,5))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+#save
+sanct<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(116, 180), ylim = c(-46, 0)) + 
+  geom_point(data = sampling.df[sampling.df$species == "sanctus",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[5])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,5))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+```
+
+### make leucopygius map
+```{r}
+#
+ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(154, 163), ylim = c(-11, -4.5)) + 
+  geom_point(data = sampling.df[sampling.df$species == "leucopygius",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[4])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+
+#save
+leuco<-ggplot()+
+  geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
+  coord_sf(xlim = c(154, 163), ylim = c(-11, -4.5)) + 
+  geom_point(data = sampling.df[sampling.df$species == "leucopygius",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[4])+
+  theme_classic()+
+  scale_size_continuous(range = c(1,2))+
+  theme(legend.position = "none",axis.title.x = element_blank(),axis.title.y = element_blank())
+```
+
+### plot them all together
+```{r}
+gl<-list(sanct,saur,alb,colonus,sord,chlor,leuco,tris)
+grid.arrange(grobs=gl, nrow = 4)
+
+grid.arrange(grobs=list(full.map,sanct,saur,alb,colonus,sord,chlor,leuco,tris,l),
+  widths = c(1, 1),heights=c(2.5,1,1,1,1),
+  layout_matrix = rbind(c(1, 10),
+                        c(4, 3),
+                        c(2, 8),
+                        c(6, 7),
+                        c(5, 9)))
+
+g <-arrangeGrob(grobs=list(full.map,sanct,saur,alb,colonus,sord,chlor,leuco,tris,l),
+  widths = c(1, 1),heights=c(2.5,1,1,1,1),
+  layout_matrix = rbind(c(1, 10),
+                        c(4, 3),
+                        c(2, 8),
+                        c(6, 7),
+                        c(5, 9)))
+
+ggsave(file="~/Desktop/todi.2022/map.fig.pdf", g, height = 11, width = 8.5, units = "in") #saves g
+
+```
+
