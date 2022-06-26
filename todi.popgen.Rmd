@@ -1,0 +1,56 @@
+---
+title: "Todiramphus popgen"
+author: "Devon DeRaad"
+date: '2022-06-25'
+output: html_document
+---
+
+# Start by reading in files and loading libraries
+```{r}
+library(vcfR)
+#read sample metadata
+samps<-read.csv("~/Desktop/todi.2022/todiramphus.subset.csv")
+
+#read in filtered vcf
+vcf<-read.vcfR("~/Desktop/todi.2022/todi.85.vcf")
+```
+
+# make splitstree
+```{r}
+#convert each to genlight
+gen<-vcfR2genlight(vcfR)
+
+#output pairwise difference matrix for each to run splitstree
+gen@ind.names<-gsub(gen@ind.names, pattern = "T_", replacement = "")
+gen@ind.names<-gsub(gen@ind.names, pattern = "_", replacement = "")
+gen@ind.names<-gsub(gen@ind.names, pattern = "albicilla", replacement = "alb")
+gen@ind.names<-gsub(gen@ind.names, pattern = "chloris", replacement = "chlor")
+gen@ind.names<-gsub(gen@ind.names, pattern = "colonus", replacement = "col")
+gen@ind.names<-gsub(gen@ind.names, pattern = "sanctus", replacement = "san")
+gen@ind.names<-gsub(gen@ind.names, pattern = "saurophagus", replacement = "saur")
+gen@ind.names<-gsub(gen@ind.names, pattern = "sordidus", replacement = "sord")
+gen@ind.names<-gsub(gen@ind.names, pattern = "tristrami", replacement = "tris")
+gen@ind.names<-gsub(gen@ind.names, pattern = "leucopygius", replacement = "leu")
+gen@ind.names<-gsub(gen@ind.names, pattern = "DOT", replacement = "D")
+gen@ind.names
+
+#
+pop(gen)<-samps$species
+sample.div <- stamppNeisD(gen, pop = FALSE)
+#export for splitstree
+#stamppPhylip(distance.mat=sample.div, file="~/Desktop/todi.2022/todi.85.splits.txt")
+
+#85% completeness cutoff splitstree
+knitr::include_graphics(c("/Users/devder/Desktop/todi.2022/todi.85.splitstree.png"))
+```
+
+# make pairwise FST plot
+```{r}
+
+```
+
+# make heterozygostiy/pi dot chart
+```{r}
+
+```
+
