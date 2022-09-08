@@ -30,7 +30,7 @@ This repository will contain a comprehensive compilation of code and expalantory
 ### Species network reconstruction
 *   The input gene alignments, beauti .xml files, and all resulting output files for running [SpeciesNetworks](https://academic.oup.com/mbe/article/35/2/504/4705834) via [BEAST2](https://www.beast2.org/) are available here:
     > <https://devonderaad.github.io/todiramphus.radseq/xxx>
-*   This analysis was only possible because of the extensively documented tutorial for SpeciesNetworks from Michael Matschiner, which has been cloned and stably archived as part of this repository. Original version [here](https://github.com/mmatschiner/tutorials/tree/master/bayesian_analysis_of_species_networks)
+*   This analysis was only possible because of the extensively documented tutorial for SpeciesNetworks from Michael Matschiner, which has been cloned and stably archived as part of this repository. Original version [here](https://github.com/mmatschiner/tutorials/tree/master/bayesian_analysis_of_species_networks), stably archived version [here](https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/bayesian_analysis_of_species_networks).
 
 ### ABBA/BABA tests for gene flow
 *   We used [Dsuite](https://github.com/millanek/Dsuite) to perform ABBA/BABA tests for excess allele sharing between non-sister taxa across the phylogeny. The code, input files, and output files resulting from running Dsuite are all available here:
