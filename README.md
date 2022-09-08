@@ -22,6 +22,10 @@ This repository will contain a comprehensive compilation of code and expalantory
 ### Population genetic analyses
 *   The three descriptive pop-gen analyses performed to determine individual sample relatedness using [SplitsTree](https://doi.org/10.1093/molbev/msj030), sample clustering using [popVAE](https://github.com/kr-colab/popvae), and genetic diversity using [Stacks 'populations' module](https://catchenlab.life.illinois.edu/stacks/comp/populations.php) are available for viewing here:
     > <https://devonderaad.github.io/todiramphus.radseq/todi.popgen.html>
+ 
+ ### Population genetic analyses
+*   The three descriptive pop-gen analyses performed to determine individual sample relatedness using [SplitsTree](https://doi.org/10.1093/molbev/msj030), sample clustering using [popVAE](https://github.com/kr-colab/popvae), and genetic diversity using [Stacks 'populations' module](https://catchenlab.life.illinois.edu/stacks/comp/populations.php) are available for viewing here:
+    > <https://devonderaad.github.io/todiramphus.radseq/todi.popgen.html>
 
 ### Species tree reconstruction
 *   All input files and code necessary to reconstruct the mtDNA and nDNA species trees generated with [IQtree2](http://www.iqtree.org/) and [ASTRAL-III](https://github.com/smirarab/ASTRAL) respectively, are available here:
