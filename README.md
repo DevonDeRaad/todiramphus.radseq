@@ -25,7 +25,7 @@ This repository will contain a comprehensive compilation of code and expalantory
  
  ### Pairwise divergence matrices
 *   All steps involved in creating pairwise divergence matrices for both mtDNA and nDNA data are available for viewing here:
-    > <https://devonderaad.github.io/todiramphus.radseq/make.pairiwse.heatmaps.html>
+    > <https://devonderaad.github.io/todiramphus.radseq/make.pairwise.heatmaps.html>
 
 ### Species tree reconstruction
 *   All input files and code necessary to reconstruct the mtDNA and nDNA species trees generated with [IQtree2](http://www.iqtree.org/) and [ASTRAL-III](https://github.com/smirarab/ASTRAL) respectively, are available here:
