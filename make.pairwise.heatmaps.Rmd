@@ -1,0 +1,233 @@
+---
+title: "pairwise divergence heatmaps"
+author: "Devon DeRaad"
+date: '2022-07-13'
+output: html_document
+---
+
+# mtDNA divergence heatmap
+```{r}
+#load libraries
+library(ggplot2)
+library(phangorn)
+
+#read in nexus file
+all_concat <- read.phyDat(file.path("~/Desktop/todi.2022/mtDNA/todi.mito.alignment.nex"), format = "nexus")
+all_concat<-all_concat[c(5,8,3,4,2,1,6,7)] #reorder
+names(all_concat)<- c("albicilla","chloris","colonus","leucopygius","sanctus","saurophagus","sordidus","tristrami") #rename
+#create distance matrix based on all genes concatenated
+m<-phangorn::dist.hamming(all_concat, ratio = TRUE) #this computes raw, uncorrected 'p' distance
+
+#melt for plotting
+heat <- reshape::melt(as.matrix(m))
+heat$value<-heat$value*100
+#plot with labels
+ggplot(data = heat, aes(x=X1, y=X2, fill=value)) + 
+  geom_tile()+
+  geom_text(data=heat,aes(label=round(value, 2)))+
+  theme_minimal()+
+  scale_fill_gradient2(low = "white", high = "red", space = "Lab", name="(uncorrected\n P distance)\n% mtDNA\ndivergence") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.text.y = element_text(angle = 45, hjust = 1))
+
+#calculate number of pairwise differences
+#convert sequence to df
+df<-as.data.frame(all_concat)
+#convert df to matrix
+#mat<-as.matrix(df)
+
+#make vector to fill with fixed diff values
+f<-c()
+
+#write for loop to calc number of diffs between each pop
+for (i in 1:nrow(heat)){
+  #calc and store the number of differences
+  f[i]<-sum(df[,heat$X1[i]] != df[,heat$X2[i]])
+}
+
+#add number of fixed diffs to df
+heat$diffs<-f
+
+###code that will get you the vector needed to fix assignments of FST values versus fixed differences
+#define n as the number of taxa used in your pairwise comparison
+n<-8
+i<-1 #begin incrementer (i) at 1
+#while loop that will make the appropriate vector and store it in the variable 'x'
+while (i < n){
+  #the first set of numbers is simply 2:n
+  if(i == 1){
+    x<-c(2:n)
+    i=i+1
+  }
+  #the second set of numbers is (2+n+1):(2*n) which we add to the existing vector
+  if(i == 2){
+    x<-c(x,(2+n+1):(2*n))
+    i=i+1
+  }
+  #we then add (2+((i-1)*(n+1))):(i*n) to the vector, where i=3, and continue adding this vector to the growing vector until i = n-1
+  if(i > 2){
+    x<-c(x,(2+((i-1)*(n+1))):(i*n))
+    i=i+1
+  }
+}
+
+#fix the assignments using the vector stored as 'x'
+heat$mixed<-heat$value
+heat$mixed[x]<-heat$diffs[x]
+
+#convert 000 values to NA
+heat$mixed[heat$mixed == 0]<-NA
+heat$value[heat$value == 0]<-NA
+
+#plot
+ggplot(data = heat, aes(x=X1, y=X2, fill=value)) + 
+  geom_tile()+
+  geom_text(data=heat,aes(label=round(mixed, 2)), size=4)+
+  theme_minimal()+
+  scale_fill_gradient2(low = "white", high = "red", space = "Lab", name="% mtDNA\ndivergence") +
+  theme(axis.text.x = element_text(angle = 45, vjust=.9, hjust = .9, size=12, face = "italic", color="black"),
+        axis.text.y = element_text(angle = 45, hjust = 1, size=12, face = "italic", color="black"),
+        axis.title.x = element_blank(), axis.title.y = element_blank())
+
+#save plot
+mt.plot<-ggplot(data = heat, aes(x=X1, y=X2, fill=value)) + 
+  geom_tile()+
+  geom_text(data=heat,aes(label=round(mixed, 2)), size=4)+
+  theme_minimal()+
+  scale_fill_gradient2(low = "white", high = "red", space = "Lab", name="Fst") +
+  theme(axis.text.x = element_text(angle = 45, vjust=.9, hjust = .9, size=12, face = "italic", color="black"),
+        axis.text.y = element_text(angle = 45, hjust = 1, size=12, face = "italic", color="black"),
+        axis.title.x = element_blank(), axis.title.y = element_blank())
+
+#write plot to disk
+#ggsave("~/Desktop/todi.2022/mtDNA/pairwise.mt.plot.pdf", mt.plot, width = 6,height = 4.5,units = "in")
+```
+
+# RAD nuclear divergence heatmap
+```{r}
+#load required libraries
+library(vcfR)
+library(StAMPP)
+library(adegenet)
+library(ggplot2)
+library(RColorBrewer)
+
+#read sample metadata
+samps<-read.csv("~/Desktop/todi.2022/todiramphus.subset.csv")
+
+#read in filtered vcf
+vcf<-read.vcfR("~/Desktop/todi.2022/todi.85.vcf")
+
+#keep sample metadata for only the samples that are retained in the vcf
+samps<-samps[samps$id %in% colnames(vcf@gt),]
+#write.csv(samps, "~/Desktop/todi.2022/todi.retained.samples.csv", quote = F, row.names = F)
+
+#reorder sampling file to match order of samples in vcf
+samps<-samps[match(colnames(vcf@gt)[-1], samps$id),]
+#make sure order matches
+samps$id == colnames(vcf@gt)[-1]
+
+#convert each to genlight
+gen<-vcfR2genlight(vcf)
+
+#calculate Fst and fixed differences
+#calc pairwise Fst
+gen@pop<-as.factor(samps$species)
+di.heat<-stamppFst(gen)
+m<-di.heat$Fsts
+#fill in upper triangle of matrix
+m[upper.tri(m)] <- t(m)[upper.tri(m)]
+
+#melt for plotting
+heat <- reshape::melt(m)
+
+#plot with labels
+ggplot(data = heat, aes(x=X1, y=X2, fill=value)) + 
+  geom_tile()+
+  geom_text(data=heat,aes(label=round(value, 2)))+
+  theme_minimal()+
+  scale_fill_gradient2(low = "white", high = "red", space = "Lab", name="Fst") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.text.y = element_text(angle = 45, hjust = 1))
+
+#identify the number of pairwise fixed differences between pops
+mat<-extract.gt(vcf)
+conv.mat<-mat
+conv.mat[conv.mat == "0/0"]<-0
+conv.mat[conv.mat == "0/1"]<-1
+conv.mat[conv.mat == "1/1"]<-2
+conv.mat<-as.data.frame(conv.mat)
+#convert to numeric
+for (i in 1:ncol(conv.mat)){
+  conv.mat[,i]<-as.numeric(as.character(conv.mat[,i]))
+}
+
+#show colnames to verify you're subsetting correctly
+colnames(conv.mat) == samps$id
+
+#make vector to fill with fixed diff values
+f<-c()
+
+#write for loop to calc number of fixed diffs between each pop
+for (i in 1:nrow(heat)){
+  #calc af of pop1 and pop2
+  pop1.af<-(rowSums(conv.mat[,samps$species == heat$X1[i]], na.rm=T)/(rowSums(is.na(conv.mat[,samps$species == heat$X1[i]]) == FALSE)))/2
+  pop2.af<-(rowSums(conv.mat[,samps$species == heat$X2[i]], na.rm=T)/(rowSums(is.na(conv.mat[,samps$species == heat$X2[i]]) == FALSE)))/2
+  #store number of fixed differences
+  f[i]<-sum(is.na(abs(pop1.af - pop2.af)) == FALSE & abs(pop1.af - pop2.af) == 1) #find fixed SNPs and add to vector
+}
+
+#add number of fixed diffs to df
+heat$fixed<-f
+
+###code that will get you the vector needed to fix assignments of FST values versus fixed differences
+#define n as the number of taxa used in your pairwise comparison
+n<-8
+i<-1 #begin incrementer (i) at 1
+#while loop that will make the appropriate vector and store it in the variable 'x'
+while (i < n){
+  #the first set of numbers is simply 2:n
+  if(i == 1){
+    x<-c(2:n)
+    i=i+1
+  }
+  #the second set of numbers is (2+n+1):(2*n) which we add to the existing vector
+  if(i == 2){
+    x<-c(x,(2+n+1):(2*n))
+    i=i+1
+  }
+  #we then add (2+((i-1)*(n+1))):(i*n) to the vector, where i=3, and continue adding this vector to the growing vector until i = n-1
+  if(i > 2){
+    x<-c(x,(2+((i-1)*(n+1))):(i*n))
+    i=i+1
+  }
+}
+
+#fix the assignments using the vector stored as 'x'
+heat$mixed<-heat$value
+heat$mixed[x]<-heat$fixed[x]
+
+#plot with labels
+ggplot(data = heat, aes(x=X1, y=X2, fill=value)) + 
+  geom_tile()+
+  geom_text(data=heat,aes(label=round(mixed, 2)), size=4)+
+  theme_minimal()+
+  scale_fill_gradient2(low = "white", high = "red", space = "Lab", name="Fst") +
+  theme(axis.text.x = element_text(angle = 45, vjust=.9, hjust = .9, size=12),
+        axis.text.y = element_text(angle = 45, hjust = 1, size=12),
+        axis.title.x = element_blank(), axis.title.y = element_blank())
+
+#save plot with labels
+fst.plot<-ggplot(data = heat, aes(x=X1, y=X2, fill=value)) + 
+  geom_tile()+
+  geom_text(data=heat,aes(label=round(mixed, 2)), size=4)+
+  theme_minimal()+
+  scale_fill_gradient2(low = "white", high = "red", space = "Lab", name="Fst") +
+  theme(axis.text.x = element_text(angle = 45, vjust=.9, hjust = .9, size=12, face = "italic", color="black"),
+        axis.text.y = element_text(angle = 45, hjust = 1, size=12, face = "italic", color="black"),
+        axis.title.x = element_blank(), axis.title.y = element_blank())
+
+#save plot to disk
+#ggsave("~/Desktop/todi.2022/pairwise.fst.fixed.pdf", fst.plot, width = 6,height = 4.5,units = "in")
+```
+
