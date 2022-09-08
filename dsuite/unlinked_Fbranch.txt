@@ -1,0 +1,13 @@
+branch	branch_descendants	Outgroup	sanctus	sordidus	chloris	colonus	tristrami	saurophagus	albicilla
+b2	sordidus,chloris,colonus,tristrami,saurophagus,albicilla	nan	nan	nan	nan	nan	nan	nan	nan
+b3	sanctus	nan	nan	nan	nan	nan	nan	nan	nan
+b4	chloris,colonus,tristrami,saurophagus,albicilla	nan	0	nan	nan	nan	nan	nan	nan
+b5	sordidus	nan	0	nan	nan	nan	nan	nan	nan
+b6	colonus,tristrami,saurophagus,albicilla	nan	0	0	nan	nan	nan	nan	nan
+b7	chloris	nan	0	0	nan	nan	nan	nan	nan
+b8	tristrami,saurophagus,albicilla	nan	0	0	0	nan	nan	nan	nan
+b9	colonus	nan	0	0	0	nan	nan	nan	nan
+b10	saurophagus,albicilla	nan	0	0	0	0	nan	nan	nan
+b11	tristrami	nan	0	0	0	0	nan	nan	nan
+b12	saurophagus	nan	0	0	0	0	0	nan	nan
+b13	albicilla	nan	0	0	0	0	0	nan	nan

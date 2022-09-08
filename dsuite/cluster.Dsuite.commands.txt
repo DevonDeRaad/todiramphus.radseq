@@ -1,0 +1,21 @@
+######### DSUITE cannot tolerate periods in input tip names or species names (must change to underscores)
+#cluster commands
+##copy in ruby scripts
+#cp /home/d669d153/work/todi.subset.2022/dsuite/plot_d.rb .
+#cp /home/d669d153/work/todi.subset.2022/dsuite/plot_f4ratio.rb .
+##run Dtrios
+##-c means this is the whole file, -n gives the name, -t gives the guidetree, followed by the vcf and popmap
+#/home/d669d153/work/Dsuite/Build/Dsuite Dtrios -c -n unlinked -t todi.nwk.tre todi.unlinked.85.vcf pops.txt
+#
+##plot heatmap of D
+#ruby plot_d.rb pops_unlinked_BBAA.txt plot_order.txt 0.7 unlinked_BBAA_D.svg
+#
+##plot heatmap of f4
+#ruby plot_f4ratio.rb pops_unlinked_BBAA.txt plot_order.txt 0.2 unlinked_BBAA_f4ratio.svg
+#
+##run fbranch on the guidetree, with the Dtrios output ending in 'tree.txt' (guidetree must be rooted on #outgroup)
+#/home/d669d153/work/Dsuite/Build/Dsuite Fbranch todi.nwk.tre pops_unlinked_tree.txt > unlinked_Fbranch.txt
+#
+#module load python
+##plot the fbranch heatmap with guidetree above
+#/home/d669d153/work/Dsuite/utils/dtools.py unlinked_Fbranch.txt todi.nwk.tre
