@@ -85,36 +85,35 @@ l<-ggpubr::as_ggplot(leg)
 ```{r}
 ggplot()+
   geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="black", col="black", cex=.1)+
-  coord_sf(xlim = c(95, 177), ylim = c(-40, 20)) + 
+  coord_sf(xlim = c(90, 177), ylim = c(-45, 25)) + 
   #geom_point(data = sampling.df, aes(x = long, y = lat, col=species, size=count), alpha =.9, show.legend=TRUE) +
   theme_classic()+
   guides(colour = guide_legend(override.aes = list(size = 4), order=1, label.theme = element_text(face = "italic")),
          size = guide_legend(nrow = 1, order = 2))+
   theme(legend.position = c(0.5, 0.5), legend.justification = c(0.01, 0.01))+
   geom_rect(aes(xmin = 144, xmax = 147, ymin = 12, ymax = 20), lwd=1, color=brewer.pal(8, "Set2")[1], fill=NA)+
-  geom_rect(aes(xmin = 95, xmax = 132, ymin = -11, ymax = 20), lwd=1, color=brewer.pal(8, "Set2")[2], fill=NA)+
+  geom_rect(aes(xmin = 90, xmax = 132, ymin = -11, ymax = 25), lwd=1, color=brewer.pal(8, "Set2")[2], fill=NA)+
   geom_rect(aes(xmin = 150, xmax = 153.2, ymin = -11, ymax = -8), lwd=1, color=brewer.pal(8, "Set2")[3], fill=NA)+
   geom_rect(aes(xmin = 155, xmax = 161, ymin = -10, ymax = -6), lwd=1, color=brewer.pal(8, "Set2")[4], fill=NA)+
-  geom_rect(aes(xmin = 113, xmax = 177, ymin = -42, ymax = -5), lwd=1, color=brewer.pal(8, "Set2")[5], fill=NA)+
+  geom_rect(aes(xmin = 113, xmax = 177, ymin = -46, ymax = -5), lwd=1, color=brewer.pal(8, "Set2")[5], fill=NA)+
   geom_rect(aes(xmin = 126, xmax = 162, ymin = -12, ymax = 3), lwd=1, color=brewer.pal(8, "Set2")[6], fill=NA)+
   geom_rect(aes(xmin = 112, xmax = 155, ymin = -30, ymax = -10), lwd=1, color=brewer.pal(8, "Set2")[7], fill=NA)+
   geom_rect(aes(xmin = 147, xmax = 167, ymin = -11.5, ymax = -2), lwd=1, color=brewer.pal(8, "Set2")[8], fill=NA)
 
-
 #save
 full.map<-ggplot()+
   geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="black", col="black", cex=.1)+
-  coord_sf(xlim = c(95, 177), ylim = c(-40, 20)) + 
+  coord_sf(xlim = c(90, 177), ylim = c(-45, 25)) + 
   #geom_point(data = sampling.df, aes(x = long, y = lat, col=species, size=count), alpha =.9, show.legend=TRUE) +
   theme_classic()+
   guides(colour = guide_legend(override.aes = list(size = 4), order=1, label.theme = element_text(face = "italic")),
          size = guide_legend(nrow = 1, order = 2))+
   theme(legend.position = c(0.5, 0.5), legend.justification = c(0.01, 0.01))+
   geom_rect(aes(xmin = 144, xmax = 147, ymin = 12, ymax = 20), lwd=1, color=brewer.pal(8, "Set2")[1], fill=NA)+
-  geom_rect(aes(xmin = 95, xmax = 132, ymin = -11, ymax = 20), lwd=1, color=brewer.pal(8, "Set2")[2], fill=NA)+
+  geom_rect(aes(xmin = 90, xmax = 132, ymin = -11, ymax = 25), lwd=1, color=brewer.pal(8, "Set2")[2], fill=NA)+
   geom_rect(aes(xmin = 150, xmax = 153.2, ymin = -11, ymax = -8), lwd=1, color=brewer.pal(8, "Set2")[3], fill=NA)+
   geom_rect(aes(xmin = 155, xmax = 161, ymin = -10, ymax = -6), lwd=1, color=brewer.pal(8, "Set2")[4], fill=NA)+
-  geom_rect(aes(xmin = 113, xmax = 177, ymin = -42, ymax = -5), lwd=1, color=brewer.pal(8, "Set2")[5], fill=NA)+
+  geom_rect(aes(xmin = 113, xmax = 177, ymin = -46, ymax = -5), lwd=1, color=brewer.pal(8, "Set2")[5], fill=NA)+
   geom_rect(aes(xmin = 126, xmax = 162, ymin = -12, ymax = 3), lwd=1, color=brewer.pal(8, "Set2")[6], fill=NA)+
   geom_rect(aes(xmin = 112, xmax = 155, ymin = -30, ymax = -10), lwd=1, color=brewer.pal(8, "Set2")[7], fill=NA)+
   geom_rect(aes(xmin = 147, xmax = 167, ymin = -11.5, ymax = -2), lwd=1, color=brewer.pal(8, "Set2")[8], fill=NA)
@@ -148,7 +147,7 @@ alb<-ggplot()+
 #
 ggplot()+
   geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
-  coord_sf(xlim = c(95, 138), ylim = c(-15, 20)) + 
+  coord_sf(xlim = c(90, 138), ylim = c(-15, 25)) + 
   geom_point(data = sampling.df[sampling.df$species == "chloris",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[2])+
   theme_classic()+
   scale_size_continuous(range = c(1,2))+
@@ -157,7 +156,7 @@ ggplot()+
 #save
 chlor<-ggplot()+
   geom_polygon(data = pac, aes(x=long, y = lat, group = group), fill="grey", col="black", cex=.1)+
-  coord_sf(xlim = c(95, 138), ylim = c(-15, 20)) + 
+  coord_sf(xlim = c(90, 138), ylim = c(-15, 25)) + 
   geom_point(data = sampling.df[sampling.df$species == "chloris",], aes(x = long, y = lat, size=count), alpha =.9,pch=21,colour="black",fill=brewer.pal(8, "Set2")[2])+
   theme_classic()+
   scale_size_continuous(range = c(1,2))+
