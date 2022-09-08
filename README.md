@@ -30,6 +30,10 @@ This repository will contain a comprehensive compilation of code and expalantory
 ### Species tree reconstruction
 *   All input files and code necessary to reconstruct the mtDNA and nDNA species trees generated with [IQtree2](http://www.iqtree.org/) and [ASTRAL-III](https://github.com/smirarab/ASTRAL) respectively, are available here:
     > <https://devonderaad.github.io/todiramphus.radseq/xxx>
+    
+ ### Compare site and gene concordance factors
+*   Visualize pairwise comparisons of mtDNA and nDNA site and gene concordance factors on mtDNA and nDNA species trees:
+    > <https://devonderaad.github.io/todiramphus.radseq/vis.gCFs.sCFs.html>
 
 ### Species network reconstruction
 *   The input gene alignments, beauti .xml files, and all resulting output files for running [SpeciesNetworks](https://academic.oup.com/mbe/article/35/2/504/4705834) via [BEAST2](https://www.beast2.org/) are available here:
