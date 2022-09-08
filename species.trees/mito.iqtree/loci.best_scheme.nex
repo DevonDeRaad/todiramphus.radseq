@@ -1,0 +1,24 @@
+#nexus
+begin sets;
+  charset ATPase8_6_COI3 = 1-1639;
+  charset COI1 = 1640-3190;
+  charset COI2 = 3191-3880;
+  charset NAD4 = 3881-5560;
+  charset NADH1 = 5561-6522;
+  charset NADH2 = 6523-7576;
+  charset ND3 = 7577-7930;
+  charset ND5 = 7931-9845;
+  charset ND6 = 9846-10382;
+  charset cytb = 10383-11538;
+  charpartition mymodels =
+    TN+F+I: ATPase8_6_COI3,
+    HKY+F+I: COI1,
+    HKY+F+I: COI2,
+    TN+F+I: NAD4,
+    TN+F+I: NADH1,
+    TN+F+I: NADH2,
+    HKY+F+I: ND3,
+    TN+F+I: ND5,
+    HKY+F+I: ND6,
+    TIM3+F+I: cytb;
+end;

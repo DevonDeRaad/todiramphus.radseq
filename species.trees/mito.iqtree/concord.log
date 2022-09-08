@@ -1,0 +1,42 @@
+IQ-TREE multicore version 2.2.0 COVID-edition for Linux 64-bit built Jun  1 2022
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    r11r28n04 (AVX512, FMA3, 187 GB RAM)
+Command: /home/d669d153/work/iqtree-2.2.0-Linux/bin/iqtree2 -t concat.treefile --gcf loci.treefile -s todi.mito.alignment.nex --scf 100 --prefix concord
+Seed:    245040 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jul 13 20:01:01 2022
+Kernel:  AVX+FMA - 1 threads (15 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 15 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file todi.mito.alignment.nex ... Nexus format detected
+Skipping unknown block (SETS)...
+WARNING: 181 sites contain only gaps or ambiguous characters.
+Alignment has 8 sequences with 11538 columns, 169 distinct patterns
+236 parsimony-informative, 733 singleton sites, 10569 constant sites
+                                     Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.1461e-05 secs using 74.55% CPU
+   1  todiramphus_saurophagus_kunhm27804     1.57%    passed     99.52%
+   2  todiramphus_sanctus_anwcb56378         1.57%    passed     98.28%
+   3  todiramphus_colonus_snzptkp2003071     1.57%    passed     99.74%
+   4  todiramphus_leucopygius_amnhdot6658    1.57%    passed     87.66%
+   5  todiramphus_albicilla_kunhm22581       1.57%    passed     99.73%
+   6  todiramphus_sordidus_anwcb44295        1.57%    passed     99.87%
+   7  todiramphus_tristrami_amnhdot6704      1.57%    passed     99.62%
+   8  todiramphus_chloris_kunhm18130         1.57%    passed     99.43%
+****  TOTAL                                  1.57%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Reading tree concat.treefile ...
+un-rooted tree with 8 taxa and 13 branches
+Reading tree(s) file loci.treefile ...
+10 tree(s) loaded (0 rooted and 10 unrooted)
+Computing gene concordance factor...
+0.000 sec
+Computing site concordance factor...
+0.001 sec
+Tree with concordance factors written to concord.cf.tree
+Annotated tree (best viewed in FigTree) written to concord.cf.tree.nex
+Tree with branch IDs written to concord.cf.branch
+Concordance factors per branch printed to concord.cf.stat
+Date and Time: Wed Jul 13 20:01:01 2022

@@ -1,0 +1,180 @@
+IQ-TREE 2.2.0 COVID-edition built Jun  1 2022
+
+Partition file name: todi.mito.alignment.nex
+Input file name: todi.mito.alignment.nex
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 814394
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst. Biol., 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 8 taxa with 10 partitions and 11538 total sites (0% missing data)
+
+  ID	Type	Seq	Site	Unique	Infor	Invar	Const	Name
+   1	DNA	8	1639	63	32	1514	1514	ATPase8_6_COI3
+   2	DNA	8	1551	54	25	1426	1426	COI1
+   3	DNA	8	690	36	8	640	640	COI2
+   4	DNA	8	1680	62	31	1527	1527	NAD4
+   5	DNA	8	962	39	16	883	883	NADH1
+   6	DNA	8	1054	48	22	957	957	NADH2
+   7	DNA	8	354	22	10	327	327	ND3
+   8	DNA	8	1915	65	44	1753	1753	ND5
+   9	DNA	8	537	45	21	472	472	ND6
+  10	DNA	8	1156	51	27	1070	1070	cytb
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TN+F+I:ATPase8_6_COI3,HKY+F+I:COI1,HKY+F+I:COI2,TN+F+I:NAD4,TN+F+I:NADH1,TN+F+I:NADH2,HKY+F+I:ND3,TN+F+I:ND5,HKY+F+G4:ND6,TIM3+F+I:cytb
+
+List of best-fit models per partition:
+
+  ID  Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+   1  TN+F+I            -2968.798    5951.597 + 6.95e-310    5951.665 + 4.65e-317    5989.409 + 6.95e-310
+   2  HKY+F+I           -2857.038    5726.076 + 6.95e-310    5726.131 + 4.65e-317    5758.156 + 6.95e-310
+   3  HKY+F+I           -1236.561    2485.121 + 6.95e-310    2485.244 + 4.65e-317    2512.341 + 6.95e-310
+   4  TN+F+I            -3095.118    6204.237 + 6.95e-310    6204.304 + 4.65e-317    6242.223 + 6.95e-310
+   5  TN+F+I            -1745.469    3504.939 + 6.95e-310    3505.056 + 4.65e-317    3539.022 + 6.95e-310
+   6  TN+F+I            -1933.429    3880.859 + 6.95e-310    3880.966 + 4.65e-317    3915.581 + 6.95e-310
+   7  HKY+F+I            -636.383    1284.765 + 6.95e-310    1285.007 + 4.65e-317    1307.981 + 6.95e-310
+   8  TN+F+I            -3380.925    6775.849 + 6.95e-310    6775.908 + 4.65e-317    6814.752 + 6.95e-310
+   9  HKY+F+G4          -1023.683    2059.366 + 6.95e-310    2059.525 + 4.65e-317    2085.082 + 6.95e-310
+  10  TIM3+F+I          -2074.572    4165.144 + 6.95e-310    4165.270 + 4.65e-317    4205.566 + 6.95e-310
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model with separate substitution models and separate rates across sites
+
+  ID  Model           Speed  Parameters
+   1  TN+F+I         0.8921  TN{42.7787,13.1495}+F{0.288284,0.347478,0.120849,0.243389}+I{0.815019}
+   2  HKY+F+I        0.7790  HKY{36.821}+F{0.266199,0.316489,0.162879,0.254433}+I{0.736241}
+   3  HKY+F+I        0.8090  HKY{35.8638}+F{0.315607,0.298977,0.143458,0.241959}+I{0.825039}
+   4  TN+F+I         1.0256  TN{59.2226,19.5084}+F{0.29384,0.357314,0.112785,0.236061}+I{0.761005}
+   5  TN+F+I         0.8491  TN{64.8121,20.9662}+F{0.265005,0.344337,0.126957,0.2637}+I{0.754567}
+   6  TN+F+I         1.1100  TN{83.5609,28.9229}+F{0.328681,0.326756,0.0974495,0.247113}+I{0.771206}
+   7  HKY+F+I        1.1272  HKY{49.3063}+F{0.24858,0.112216,0.361506,0.277699}+I{0.867249}
+   8  TN+F+I         1.0750  TN{64.6248,21.6243}+F{0.31946,0.341235,0.113561,0.225744}+I{0.787405}
+   9  HKY+F+G4       1.6624  HKY{78.7541}+F{0.394157,0.382423,0.0938697,0.12955}+G4{0.151937}
+  10  TIM3+F+I       1.0807  TIM3{0.0001,39.4997,14.0971}+F{0.271763,0.35105,0.120516,0.256671}+I{0.865677}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -20951.9313 (s.e. 171.0548)
+Unconstrained log-likelihood (without tree): -21042.8287
+Number of free parameters (#branches + #model parameters): 79
+Akaike information criterion (AIC) score: 42061.8626
+Corrected Akaike information criterion (AICc) score: 42062.9658
+Bayesian information criterion (BIC) score: 42642.7813
+
+Total tree length (sum of branch lengths): 0.1328
+Sum of internal branch lengths: 0.0115 (8.6647% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'todiramphus_leucopygius_amnhdot6658' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
+       +--todiramphus_saurophagus_kunhm27804
+   +---| (100)
+   |   +--todiramphus_albicilla_kunhm22581
++--| (71)
+|  +-----todiramphus_tristrami_amnhdot6704
+|
+|        +----todiramphus_sanctus_anwcb56378
+|     +--| (75)
+|     |  +---todiramphus_sordidus_anwcb44295
+|  +--| (100)
+|  |  +---todiramphus_colonus_snzptkp2003071
++--| (47)
+|  +--------todiramphus_chloris_kunhm18130
+|
++-----------------------------------------------------------todiramphus_leucopygius_amnhdot6658
+
+Tree in newick format:
+
+(((todiramphus_saurophagus_kunhm27804:0.0031103406,todiramphus_albicilla_kunhm22581:0.0032705462)100:0.0061254145,todiramphus_tristrami_amnhdot6704:0.0087788138)71:0.0007077732,(((todiramphus_sanctus_anwcb56378:0.0063516511,todiramphus_sordidus_anwcb44295:0.0053357701)75:0.0006234999,todiramphus_colonus_snzptkp2003071:0.0061274999)100:0.0039002875,todiramphus_chloris_kunhm18130:0.0122883517)47:0.0001492627,todiramphus_leucopygius_amnhdot6658:0.0760247379);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -20951.931418
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
+       +--todiramphus_saurophagus_kunhm27804
+   +---| (100)
+   |   +--todiramphus_albicilla_kunhm22581
++--| (71)
+|  +-----todiramphus_tristrami_amnhdot6704
+|
+|        +----todiramphus_sanctus_anwcb56378
+|     +--| (75)
+|     |  +---todiramphus_sordidus_anwcb44295
+|  +--| (100)
+|  |  +---todiramphus_colonus_snzptkp2003071
++--| (47)
+|  +--------todiramphus_chloris_kunhm18130
+|
++-----------------------------------------------------------todiramphus_leucopygius_amnhdot6658
+
+
+Consensus tree in newick format: 
+
+(((todiramphus_saurophagus_kunhm27804:0.0031103700,todiramphus_albicilla_kunhm22581:0.0032708759)100:0.0061249257,todiramphus_tristrami_amnhdot6704:0.0087790789)71:0.0007133886,(((todiramphus_sanctus_anwcb56378:0.0063518401,todiramphus_sordidus_anwcb44295:0.0053359883)75:0.0006229717,todiramphus_colonus_snzptkp2003071:0.0061276835)100:0.0039036714,todiramphus_chloris_kunhm18130:0.0122904547)47:0.0001422265,todiramphus_leucopygius_amnhdot6658:0.0760307834);
+
+TIME STAMP
+----------
+
+Date and time: Wed Jul 13 19:58:30 2022
+Total CPU time used: 386.723436 seconds (0h:6m:26s)
+Total wall-clock time used: 62.12434499 seconds (0h:1m:2s)
+

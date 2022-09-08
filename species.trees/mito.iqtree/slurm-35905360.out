@@ -1,0 +1,2177 @@
+IQ-TREE multicore version 2.2.0 COVID-edition for Linux 64-bit built Jun  1 2022
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    r11r28n04 (AVX512, FMA3, 187 GB RAM)
+Command: /home/d669d153/work/iqtree-2.2.0-Linux/bin/iqtree2 -s todi.mito.alignment.nex -p todi.mito.alignment.nex --prefix concat -o todiramphus_leucopygius_amnhdot6658 -bb 1000 -nt 15
+Seed:    814394 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jul 13 19:56:39 2022
+Kernel:  AVX+FMA - 15 threads (15 CPU cores detected)
+
+Reading partition model file todi.mito.alignment.nex ...
+Skipping unknown block (DATA)...
+Reading alignment file todi.mito.alignment.nex ... Nexus format detected
+Skipping unknown block (SETS)...
+WARNING: 181 sites contain only gaps or ambiguous characters.
+Alignment has 8 sequences with 11538 columns, 169 distinct patterns
+236 parsimony-informative, 733 singleton sites, 10569 constant sites
+                                     Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 6.0572e-05 secs using 1019% CPU
+   1  todiramphus_saurophagus_kunhm27804     1.57%    passed     99.52%
+   2  todiramphus_sanctus_anwcb56378         1.57%    passed     98.28%
+   3  todiramphus_colonus_snzptkp2003071     1.57%    passed     99.74%
+   4  todiramphus_leucopygius_amnhdot6658    1.57%    passed     87.66%
+   5  todiramphus_albicilla_kunhm22581       1.57%    passed     99.73%
+   6  todiramphus_sordidus_anwcb44295        1.57%    passed     99.87%
+   7  todiramphus_tristrami_amnhdot6704      1.57%    passed     99.62%
+   8  todiramphus_chloris_kunhm18130         1.57%    passed     99.43%
+****  TOTAL                                  1.57%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 10 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		8	1639	32	1514		ATPase8_6_COI3
+2		8	1551	25	1426		COI1
+3		8	690	8	640		COI2
+4		8	1680	31	1527		NAD4
+5		8	962	16	883		NADH1
+6		8	1054	22	957		NADH2
+7		8	354	10	327		ND3
+8		8	1915	44	1753		ND5
+9		8	537	21	472		ND6
+10		8	1156	27	1070		cytb
+Degree of missing data: 0.000
+Info: multi-threading strategy over alignment sites
+
+
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: 15 threads for alignment length 51 will slow down analysis
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Initial log-likelihood: -22034.169
+Current log-likelihood at step 1: -21024.718
+Current log-likelihood at step 2: -20932.413
+Current log-likelihood at step 3: -20932.260
+Parameters optimization took 2 rounds (0.448 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.266275 secs using 189.6% CPU
+Estimate model parameters (epsilon = 1.000)
+Initial log-likelihood: -20932.124
+Current log-likelihood at step 1: -20931.808
+Partition-specific rates:  0.893 0.775 0.859 1.027 0.850 1.127 1.172 1.050 1.692 1.052
+Parameters optimization took 0 rounds (0.088 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Time for fast ML tree search: 0.832 seconds
+
+NOTE: ModelFinder requires 3 MB RAM!
+Selecting individual models for 10 charsets using BIC...
+ No. Model        Score       TreeLen     Charset
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   1 TN+F+I       6814.752    0.143       ND5
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   2 TN+F+I       5989.409    0.119       ATPase8_6_COI3
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   3 TN+F+I       6242.223    0.136       NAD4
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   4 HKY+F+I      5758.156    0.103       COI1
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   5 TIM3+F+I     4205.566    0.144       cytb
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   6 TN+F+I       3915.581    0.148       NADH2
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   7 HKY+F+G4     2085.082    0.222       ND6
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   8 TN+F+I       3539.022    0.113       NADH1
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+   9 HKY+F+I      2512.341    0.108       COI2
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+  10 HKY+F+I      1307.981    0.150       ND3	0h:0m:47s (0h:0m:0s left)
+Full partition model BIC score: 42642.872 (LnL: -20951.977  df:79)
+Partition information was printed to concat.best_scheme.nex
+Partition information in Raxml format was printed to concat.best_scheme
+
+All model information printed to concat.model.gz
+CPU time for ModelFinder: 77.814 seconds (0h:1m:17s)
+Wall-clock time for ModelFinder: 48.716 seconds (0h:0m:48s)
+Generating 1000 samples for ultrafast bootstrap (seed: 814394)...
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: 15 threads for alignment length 51 will slow down analysis
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: 15 threads for alignment length 51 will slow down analysis
+
+NOTE: 2 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -20951.977
+Current log-likelihood at step 1: -20951.952
+Partition-specific rates:  0.892 0.778 0.809 1.024 0.849 1.110 1.130 1.074 1.667 1.082
+Parameters optimization took 0 rounds (0.039 sec)
+
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.000108879 secs using 668.6% CPU
+Computing ML distances took 0.000351 sec (of wall-clock time) 0.001991 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000388847 secs using 205.5% CPU
+Constructing RapidNJ tree: done in 0.00237429 secs using 184.5% CPU
+Computing RapidNJ tree took 0.002814 sec (of wall-clock time) 0.005263 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -21328.977
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.123 second
+Computing log-likelihood of 63 initial trees ... 1.702 seconds
+Current best score: -20951.952
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.257832 secs using 813.1% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -20951.952
+Current log-likelihood at step 1: -20951.939
+Parameters optimization took 0 rounds (0.039 sec)
+
+BETTER TREE FOUND at iteration 1: -20951.939
+Optimizing NNI: done in 0.54974 secs using 796.8% CPU
+Optimizing NNI: done in 0.55819 secs using 784.8% CPU
+Optimizing NNI: done in 0.511938 secs using 779% CPU
+Optimizing NNI: done in 0.566539 secs using 821.5% CPU
+Optimizing NNI: done in 0.542617 secs using 799% CPU
+Optimizing NNI: done in 0.836101 secs using 805.2% CPU
+Optimizing NNI: done in 1.05378 secs using 812.7% CPU
+Optimizing NNI: done in 1.05672 secs using 810.5% CPU
+Optimizing NNI: done in 0.773256 secs using 803.6% CPU
+Iteration 10 / LogL: -20951.939 / Time: 0h:0m:8s
+Optimizing NNI: done in 0.784554 secs using 792.9% CPU
+Optimizing NNI: done in 0.557406 secs using 791.9% CPU
+Optimizing NNI: done in 0.812986 secs using 776.1% CPU
+Optimizing NNI: done in 0.55183 secs using 792.2% CPU
+Optimizing NNI: done in 0.554628 secs using 787.8% CPU
+Optimizing NNI: done in 0.849058 secs using 798.9% CPU
+Optimizing NNI: done in 0.792662 secs using 786.4% CPU
+Optimizing NNI: done in 0.812054 secs using 799.3% CPU
+Optimizing NNI: done in 0.835189 secs using 800.9% CPU
+Optimizing NNI: done in 0.836746 secs using 798.6% CPU
+Iteration 20 / LogL: -20951.940 / Time: 0h:0m:16s
+Finish initializing candidate tree set (1)
+Current best tree score: -20951.939 / CPU time: 16.260
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 0.536798 secs using 549.6% CPU
+UPDATE BEST LOG-LIKELIHOOD: -20951.938
+Optimizing NNI: done in 0.320289 secs using 453.8% CPU
+UPDATE BEST LOG-LIKELIHOOD: -20951.938
+Optimizing NNI: done in 0.433103 secs using 650.7% CPU
+Optimizing NNI: done in 0.372297 secs using 503.9% CPU
+Optimizing NNI: done in 0.741394 secs using 478.1% CPU
+Optimizing NNI: done in 0.432558 secs using 642.5% CPU
+Optimizing NNI: done in 0.348139 secs using 677.6% CPU
+Optimizing NNI: done in 0.557133 secs using 565.8% CPU
+Optimizing NNI: done in 0.616376 secs using 551.1% CPU
+Optimizing NNI: done in 0.842353 secs using 565% CPU
+Iteration 30 / LogL: -20951.940 / Time: 0h:0m:21s (0h:0m:53s left)
+Optimizing NNI: done in 0.636677 secs using 643.5% CPU
+Optimizing NNI: done in 1.35438 secs using 513.4% CPU
+Optimizing NNI: done in 0.644016 secs using 640.3% CPU
+Optimizing NNI: done in 0.844601 secs using 569.4% CPU
+Optimizing NNI: done in 0.612316 secs using 558.1% CPU
+Optimizing NNI: done in 0.610731 secs using 556.7% CPU
+Optimizing NNI: done in 0.314154 secs using 463.5% CPU
+Optimizing NNI: done in 0.605421 secs using 565.1% CPU
+Optimizing NNI: done in 0.201123 secs using 644.8% CPU
+Optimizing NNI: done in 0.427473 secs using 665.2% CPU
+Iteration 40 / LogL: -20951.938 / Time: 0h:0m:28s (0h:0m:44s left)
+Optimizing NNI: done in 0.612588 secs using 555.4% CPU
+Optimizing NNI: done in 0.431231 secs using 653.1% CPU
+Optimizing NNI: done in 0.612124 secs using 552.6% CPU
+Optimizing NNI: done in 0.431576 secs using 646.4% CPU
+Optimizing NNI: done in 0.614303 secs using 547% CPU
+Optimizing NNI: done in 0.53886 secs using 547.8% CPU
+Optimizing NNI: done in 0.590758 secs using 543% CPU
+Optimizing NNI: done in 0.642648 secs using 660.5% CPU
+Optimizing NNI: done in 0.435379 secs using 656.4% CPU
+Optimizing NNI: done in 0.429203 secs using 662.4% CPU
+Iteration 50 / LogL: -20951.938 / Time: 0h:0m:33s (0h:0m:35s left)
+Log-likelihood cutoff on original alignment: -20960.471
+Optimizing NNI: done in 0.613167 secs using 548.7% CPU
+Optimizing NNI: done in 0.393935 secs using 662.3% CPU
+Optimizing NNI: done in 0.61222 secs using 559.4% CPU
+Optimizing NNI: done in 0.765563 secs using 469.1% CPU
+Optimizing NNI: done in 0.608009 secs using 551.2% CPU
+Optimizing NNI: done in 0.434915 secs using 655.3% CPU
+Optimizing NNI: done in 0.615644 secs using 551.4% CPU
+Optimizing NNI: done in 0.201296 secs using 655.8% CPU
+Optimizing NNI: done in 0.628873 secs using 656% CPU
+Optimizing NNI: done in 0.436208 secs using 659.6% CPU
+Iteration 60 / LogL: -20951.939 / Time: 0h:0m:39s (0h:0m:27s left)
+Optimizing NNI: done in 0.609052 secs using 563.1% CPU
+Optimizing NNI: done in 0.612469 secs using 553.6% CPU
+Optimizing NNI: done in 0.748504 secs using 463% CPU
+Optimizing NNI: done in 0.212333 secs using 667.4% CPU
+Optimizing NNI: done in 0.614774 secs using 549.1% CPU
+Optimizing NNI: done in 0.541332 secs using 529.3% CPU
+Optimizing NNI: done in 0.348658 secs using 688.8% CPU
+Optimizing NNI: done in 0.614643 secs using 550.7% CPU
+Optimizing NNI: done in 0.204696 secs using 637.7% CPU
+Optimizing NNI: done in 0.612301 secs using 550.1% CPU
+Iteration 70 / LogL: -20951.941 / Time: 0h:0m:44s (0h:0m:19s left)
+Optimizing NNI: done in 0.435613 secs using 640.1% CPU
+Optimizing NNI: done in 0.347902 secs using 687.5% CPU
+Optimizing NNI: done in 0.735038 secs using 483.2% CPU
+Optimizing NNI: done in 0.437361 secs using 644.1% CPU
+Optimizing NNI: done in 0.434981 secs using 659.5% CPU
+Optimizing NNI: done in 0.613172 secs using 557.6% CPU
+Optimizing NNI: done in 0.310158 secs using 464% CPU
+Optimizing NNI: done in 1.34451 secs using 517.4% CPU
+Optimizing NNI: done in 0.436681 secs using 646.9% CPU
+Optimizing NNI: done in 0.315492 secs using 449.2% CPU
+Iteration 80 / LogL: -20951.938 / Time: 0h:0m:49s (0h:0m:13s left)
+Optimizing NNI: done in 0.202304 secs using 654.8% CPU
+Optimizing NNI: done in 1.0845 secs using 524% CPU
+Optimizing NNI: done in 1.08423 secs using 531.4% CPU
+Optimizing NNI: done in 0.611284 secs using 558.4% CPU
+Optimizing NNI: done in 0.314225 secs using 464.4% CPU
+Optimizing NNI: done in 0.618323 secs using 637.3% CPU
+Optimizing NNI: done in 0.203432 secs using 640.5% CPU
+Optimizing NNI: done in 0.602511 secs using 537.1% CPU
+Optimizing NNI: done in 0.614649 secs using 560.4% CPU
+Optimizing NNI: done in 0.844499 secs using 561.7% CPU
+Iteration 90 / LogL: -20951.940 / Time: 0h:0m:56s (0h:0m:6s left)
+Optimizing NNI: done in 0.20324 secs using 632.7% CPU
+Optimizing NNI: done in 0.611921 secs using 556.3% CPU
+Optimizing NNI: done in 0.400148 secs using 657.2% CPU
+Optimizing NNI: done in 0.609714 secs using 556.8% CPU
+Optimizing NNI: done in 0.368603 secs using 497.7% CPU
+Optimizing NNI: done in 0.610959 secs using 543.7% CPU
+Optimizing NNI: done in 0.603287 secs using 551.9% CPU
+Optimizing NNI: done in 0.61589 secs using 548.5% CPU
+Optimizing NNI: done in 0.36897 secs using 507.1% CPU
+Optimizing NNI: done in 0.612945 secs using 554.4% CPU
+Iteration 100 / LogL: -20951.941 / Time: 0h:1m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -20961.304
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Optimizing NNI: done in 0.203225 secs using 645.4% CPU
+Optimizing NNI: done in 0.314594 secs using 456.9% CPU
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:1m:1s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -20951.938
+Current log-likelihood at step 1: -20951.931
+Partition-specific rates:  0.892 0.779 0.809 1.026 0.849 1.110 1.127 1.075 1.662 1.081
+Parameters optimization took 0 rounds (0.033 sec)
+
+Partition information was printed to concat.best_model.nex
+BEST SCORE FOUND : -20951.931
+Creating bootstrap support values...
+Split supports printed to NEXUS file concat.splits.nex
+Total tree length: 0.133
+
+Total number of iterations: 102
+CPU time used for tree search: 385.591 sec (0h:6m:25s)
+Wall-clock time used for tree search: 61.736 sec (0h:1m:1s)
+Total CPU time used: 386.723 sec (0h:6m:26s)
+Total wall-clock time used: 62.025 sec (0h:1m:2s)
+
+Computing bootstrap consensus tree...
+Reading input file concat.splits.nex...
+8 taxa and 23 splits.
+Consensus tree written to concat.contree
+Reading input trees file concat.contree
+Log-likelihood of consensus tree: -20951.931
+
+Analysis results written to: 
+  IQ-TREE report:                concat.iqtree
+  Maximum-likelihood tree:       concat.treefile
+  Likelihood distances:          concat.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          concat.splits.nex
+  Consensus tree:                concat.contree
+  Screen log file:               concat.log
+
+Date and Time: Wed Jul 13 19:58:30 2022
+IQ-TREE multicore version 2.2.0 COVID-edition for Linux 64-bit built Jun  1 2022
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    r11r28n04 (AVX512, FMA3, 187 GB RAM)
+Command: /home/d669d153/work/iqtree-2.2.0-Linux/bin/iqtree2 -s todi.mito.alignment.nex -S todi.mito.alignment.nex --prefix loci -nt 15
+Seed:    737940 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jul 13 19:58:30 2022
+Kernel:  AVX+FMA - 15 threads (15 CPU cores detected)
+
+Reading partition model file todi.mito.alignment.nex ...
+Skipping unknown block (DATA)...
+Reading alignment file todi.mito.alignment.nex ... Nexus format detected
+Skipping unknown block (SETS)...
+WARNING: 181 sites contain only gaps or ambiguous characters.
+Alignment has 8 sequences with 11538 columns, 169 distinct patterns
+236 parsimony-informative, 733 singleton sites, 10569 constant sites
+                                     Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 3.8132e-05 secs using 1002% CPU
+   1  todiramphus_saurophagus_kunhm27804     1.57%    passed     99.52%
+   2  todiramphus_sanctus_anwcb56378         1.57%    passed     98.28%
+   3  todiramphus_colonus_snzptkp2003071     1.57%    passed     99.74%
+   4  todiramphus_leucopygius_amnhdot6658    1.57%    passed     87.66%
+   5  todiramphus_albicilla_kunhm22581       1.57%    passed     99.73%
+   6  todiramphus_sordidus_anwcb44295        1.57%    passed     99.87%
+   7  todiramphus_tristrami_amnhdot6704      1.57%    passed     99.62%
+   8  todiramphus_chloris_kunhm18130         1.57%    passed     99.43%
+****  TOTAL                                  1.57%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 10 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		8	1639	32	1514		ATPase8_6_COI3
+2		8	1551	25	1426		COI1
+3		8	690	8	640		COI2
+4		8	1680	31	1527		NAD4
+5		8	962	16	883		NADH1
+6		8	1054	22	957		NADH2
+7		8	354	10	327		ND3
+8		8	1915	44	1753		ND5
+9		8	537	21	472		ND6
+10		8	1156	27	1070		cytb
+Linked 8 total sequences
+
+WARNING: 15 threads for alignment length 63 will slow down analysis
+WARNING: 15 threads for alignment length 54 will slow down analysis
+WARNING: 15 threads for alignment length 36 will slow down analysis
+WARNING: 15 threads for alignment length 62 will slow down analysis
+WARNING: 15 threads for alignment length 39 will slow down analysis
+WARNING: 15 threads for alignment length 48 will slow down analysis
+WARNING: 15 threads for alignment length 22 will slow down analysis
+WARNING: 15 threads for alignment length 65 will slow down analysis
+WARNING: 15 threads for alignment length 45 will slow down analysis
+WARNING: 15 threads for alignment length 51 will slow down analysis
+Creating fast initial parsimony tree by random order stepwise addition...
+0.007 seconds, parsimony score: 1122 (based on 969 sites)
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+ERROR: 
+ERROR: 
+ERROR: ERROR: *** IQ-TREE CRASHES WITH SIGNAL *** IQ-TREE CRASHES WITH SIGNAL SEGMENTATION FAULTSEGMENTATION FAULT
+
+ERROR: ERROR: *** For bug report please send to developers:*** For bug report please send to developers:
+
+ERROR: ***    Log file: ERROR: ***    Log file: loci.logloci.log
+
+ERROR: ERROR: ***    Alignment files (if possible)***    Alignment files (if possible)
+
+*** Error in `/home/d669d153/work/iqtree-2.2.0-Linux/bin/iqtree2': double free or corruption (!prev): 0x0000000002cf9e40 ***
+/var/spool/slurmd/job35905360/slurm_script: line 16: 95064 Segmentation fault      (core dumped) /home/d669d153/work/iqtree-2.2.0-Linux/bin/iqtree2 -s todi.mito.alignment.nex -S todi.mito.alignment.nex --prefix loci -nt 15
+IQ-TREE multicore version 2.2.0 COVID-edition for Linux 64-bit built Jun  1 2022
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    r11r28n04 (AVX512, FMA3, 187 GB RAM)
+Command: /home/d669d153/work/iqtree-2.2.0-Linux/bin/iqtree2 -t concat.treefile --gcf loci.treefile -s todi.mito.alignment.nex --scf 100 --prefix concord
+Seed:    935609 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jul 13 19:58:30 2022
+Kernel:  AVX+FMA - 1 threads (15 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 15 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file todi.mito.alignment.nex ... Nexus format detected
+Skipping unknown block (SETS)...
+WARNING: 181 sites contain only gaps or ambiguous characters.
+Alignment has 8 sequences with 11538 columns, 169 distinct patterns
+236 parsimony-informative, 733 singleton sites, 10569 constant sites
+                                     Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.3966e-05 secs using 83.45% CPU
+   1  todiramphus_saurophagus_kunhm27804     1.57%    passed     99.52%
+   2  todiramphus_sanctus_anwcb56378         1.57%    passed     98.28%
+   3  todiramphus_colonus_snzptkp2003071     1.57%    passed     99.74%
+   4  todiramphus_leucopygius_amnhdot6658    1.57%    passed     87.66%
+   5  todiramphus_albicilla_kunhm22581       1.57%    passed     99.73%
+   6  todiramphus_sordidus_anwcb44295        1.57%    passed     99.87%
+   7  todiramphus_tristrami_amnhdot6704      1.57%    passed     99.62%
+   8  todiramphus_chloris_kunhm18130         1.57%    passed     99.43%
+****  TOTAL                                  1.57%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Reading tree concat.treefile ...
+un-rooted tree with 8 taxa and 13 branches
+Reading tree(s) file loci.treefile ...
+ERROR: File not found or incorrect input, pls check it again.loci.treefile

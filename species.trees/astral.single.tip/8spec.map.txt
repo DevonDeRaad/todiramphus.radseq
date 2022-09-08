@@ -1,0 +1,8 @@
+T_albicilla_22611	albicilla
+T_chloris_12584	chloris
+T_colonus_2003089	colonus
+T_leucopygius_32019	leucopygius
+T_sanctus_25117	sanctus
+T_saurophagus_27804	saurophagus
+T_sordidus_B33720	sordidus
+T_tristrami_27752	tristrami

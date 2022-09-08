@@ -1,0 +1,46 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=8;
+TAXLABELS
+[1] 'todiramphus_saurophagus_kunhm27804'
+[2] 'todiramphus_sanctus_anwcb56378'
+[3] 'todiramphus_colonus_snzptkp2003071'
+[4] 'todiramphus_leucopygius_amnhdot6658'
+[5] 'todiramphus_albicilla_kunhm22581'
+[6] 'todiramphus_sordidus_anwcb44295'
+[7] 'todiramphus_tristrami_amnhdot6704'
+[8] 'todiramphus_chloris_kunhm18130'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=8 nsplits=23;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 1,
+	100	 5,
+	100	 1 5,
+	100	 7,
+	71	 1 5 7,
+	100	 8,
+	25	 1 5 7 8,
+	100	 2,
+	100	 6,
+	75	 2 6,
+	100	 3,
+	100	 2 3 6,
+	100	 4,
+	47	 1 4 5 7,
+	21	 4 8,
+	9	 1 4 5,
+	17	 2 3,
+	8	 3 6,
+	3	 4 7 8,
+	6	 7 8,
+	13	 4 7,
+	2	 1 4 5 8,
+	2	 1 5 8,
+;
+END; [Splits]
+
