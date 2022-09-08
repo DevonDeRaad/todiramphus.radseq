@@ -1,0 +1,76 @@
+---
+title: "compare gCFs and sCFs"
+author: "Devon DeRaad"
+date: '2022-07-20'
+output: html_document
+---
+
+# Manually code in gCF and sCF paiwise comparisons
+```{r}
+library(ggplot2)
+df<-data.frame(comparison=c(rep("nDNA gCFs, nDNA tree", times=5),
+                            rep("mtDNA gCFs, nDNA tree", times=5),
+                            rep("nDNA sCFs, nDNA tree", times=5),
+                            rep("mtDNA sCFs, nDNA tree", times=5),
+                            rep("mtDNA gCFs, mtDNA tree", times=5),
+                            rep("nDNA gCFs, mtDNA tree", times=5),
+                            rep("mtDNA sCFs, mtDNA tree", times=5),
+                            rep("nDNA sCFs, mtDNA tree", times=5)),
+               cf.class=c(rep("gCF", times=10),rep("sCF", times=10),
+                    rep("gCF", times=10),rep("sCF", times=10)),
+               matcomp=c(rep(c(rep("matched", times=5),rep("mismatched", times=5)), times=4)),
+               cf=c(15.9,13.8,11,15,24.9,
+                       0,0,0,40,80,
+                       43.2,55.5,59.8,48.5,63.8,
+                       19.6,22.9,32.1,58.2,86.2,
+                       80,40,50,80,20,
+                       24.9,15,5.02,1.62,3.65,
+                       85.8,37.9,46.2,70.1,37.3,
+                       64.2,67.5,50.5,22,25.1))
+
+#reorder factor levels so that the boxplot plots in the logical order
+df$comparison<-factor(df$comparison,c("nDNA gCFs, nDNA tree", 
+                                      "mtDNA gCFs, nDNA tree",
+                                      "mtDNA gCFs, mtDNA tree",
+                                      "nDNA gCFs, mtDNA tree",
+                                      "nDNA sCFs, nDNA tree",
+                                      "mtDNA sCFs, nDNA tree",
+                                      "mtDNA sCFs, mtDNA tree",
+                                      "nDNA sCFs, mtDNA tree"))
+
+```
+
+# Visualize the comparisons
+```{r}
+#basic boxplot
+ggplot(df, aes(x=comparison, y=cf, fill=matcomp))+ 
+  geom_boxplot(position=position_dodge(1))+
+  geom_jitter(shape=16, position=position_jitter(0.2))+
+  theme_classic()+
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, color="black"))
+
+#gussied up
+ggplot(df, aes(x=comparison, y=cf, fill=matcomp))+ 
+  geom_boxplot(position=position_dodge(1))+
+  geom_jitter(shape=16, position=position_jitter(0.2))+
+  scale_fill_manual(values = c("gray80","gray40"))+
+  stat_summary(fun=mean, geom="point", shape=8, size=8)+
+  ylab("concordance factor")+
+  theme_classic()+
+  theme(axis.text.x = element_text(angle = 15, vjust = 1, hjust = 1, color="black"),
+        axis.title.x = element_blank(),legend.title = element_blank())
+
+#save
+box.comps<-ggplot(df, aes(x=comparison, y=cf, fill=matcomp))+ 
+  geom_boxplot(position=position_dodge(1))+
+  geom_jitter(shape=16, position=position_jitter(0.2))+
+  scale_fill_manual(values = c("gray80","gray40"))+
+  stat_summary(fun=mean, geom="point", shape=8, size=3)+
+  ylab("concordance factor")+
+  theme_classic()+
+  theme(axis.text.x = element_text(angle = 18, vjust = 1, hjust = 1, color="black"),
+        axis.title.x = element_blank(),legend.title = element_blank())
+
+#ggsave("~/Desktop/todi.2022/box.comps.pdf", box.comps, width=8.5, height=2.9, units="in")
+```
+
