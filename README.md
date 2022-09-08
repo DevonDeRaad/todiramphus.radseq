@@ -29,7 +29,8 @@ This repository will contain a comprehensive compilation of code and expalantory
 
 ### Species tree reconstruction
 *   All input files and code necessary to reconstruct the mtDNA and nDNA species trees generated with [IQtree2](http://www.iqtree.org/) and [ASTRAL-III](https://github.com/smirarab/ASTRAL) respectively, are available here:
-    > <https://devonderaad.github.io/todiramphus.radseq/xxx>
+    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/species.trees>
+*   In specific, a detailed workflow showing the step-by-step process of generating gene tree alignments from filtered SNP data, generating a species tree using ASTRAL-III, and calculating gene and site condordance factors on this species tree is available [here](https://devonderaad.github.io/todiramphus.radseq/species.trees/astral.single.tip/SNPs.to.species.tree.workflow.single.tip.html).
     
  ### Compare site and gene concordance factors
 *   Visualize pairwise comparisons of mtDNA and nDNA site and gene concordance factors on mtDNA and nDNA species trees:
