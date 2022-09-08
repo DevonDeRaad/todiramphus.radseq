@@ -5,10 +5,10 @@ This repository will contain a comprehensive compilation of code and expalantory
 
 ### Data generation
 *   Protocols used for DNA extraction from fresh tissue samples, and RAD library prep can be found here:
-    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/master/lab.protocols>
+    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/lab.protocols>
 
 ### Quality filtering
 *   Information for data quality filtering can be found here:
-    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/master/xxx>
+    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/xxx>
 
 under development
