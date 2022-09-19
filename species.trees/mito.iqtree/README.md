@@ -1,0 +1,1 @@
+The input mtDNA alignment used for tree building is stored here as 'todi.mito.alignment.nex'. The script to infer the species tree and concordance factors for each internal branch using iqtree2 is called 'run.mito.iqtree.sh'.
