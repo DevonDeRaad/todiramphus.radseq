@@ -1,0 +1,18 @@
+<itsabeastystatewerein version='2.0' sample='5000000'>
+<statenode id='Tree.defunct'>(((((0:0.0017993883444481842,5:0.001799388344448193)8:0.014198483542249759,7:0.01599787188669797)11:0.014467739715102748,((1:0.006266229798472957,6:0.006266229798472964)10:0.022934092256523347,2:0.029200322054996206)9:0.0012652895468043858)12:0.006912926050736082,4:0.037378537652536695)13:0.04278453752647698,3:0.08016307517901375)14:0.0</statenode>
+<statenode id='u'>u[1 1] (0.0,Infinity): 8.79277562303944 </statenode>
+<statenode id='v'>v[1 1] (0.0,Infinity): 0.53014672184129 </statenode>
+<statenode id='lambda'>lambda[1 1] (0.0,Infinity): 33.145658555591275 </statenode>
+<statenode id='coalescenceRate'>coalescenceRate[15 1] (-Infinity,Infinity): 14.694973472817152 30.475535168488136 18.356934838841884 17.42706655314167 13.795410700095525 19.072770220897006 23.392267123392028 16.440932811149466 54.39416675151245 15.67903639602601 12.996130045846352 37.45446140476483 21.409954148162427 36.39364066177203 16.60197254528304 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"NodeSwapper","p":"NaN","accept":22177,"reject":177280,"acceptFC":22140,"rejectFC":176850,"rejectIv":38302,"rejectOp":38302},
+{"id":"NodeBudger","p":0.9999979178276401,"accept":92215,"reject":107517,"acceptFC":91993,"rejectFC":107314,"rejectIv":0,"rejectOp":0},
+{"id":"TreeScaler","p":0.4511577561261217,"accept":42200,"reject":158100,"acceptFC":42141,"rejectFC":157717,"rejectIv":0,"rejectOp":0},
+{"id":"GammaMover","p":1.7380274685852672,"accept":782404,"reject":2416171,"acceptFC":777796,"rejectFC":2413462,"rejectIv":0,"rejectOp":0},
+{"id":"RateMixer","p":0.016610300193564645,"accept":1750,"reject":398115,"acceptFC":1717,"rejectFC":397236,"rejectIv":0,"rejectOp":0},
+{"id":"MutationMover","p":"NaN","accept":31171,"reject":369563,"acceptFC":31096,"rejectFC":368702,"rejectIv":96240,"rejectOp":96240},
+{"id":"lambdaScaler","p":0.21711718732050506,"accept":112938,"reject":288400,"acceptFC":112186,"rejectFC":288246,"rejectIv":0,"rejectOp":0}
+]}
+-->
