@@ -38,11 +38,11 @@ This repository will contain a comprehensive compilation of code and expalantory
 
 ### Species tree reconstruction using SNAPP
 *   The input .xml files and output tree and log files associated with running [SNAPP](https://academic.oup.com/mbe/article/29/8/1917/1045283) are available here:
-    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/species.trees/snapp>
+    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/snapp>
     
 ### Species network reconstruction
 *   The input bi-allelic SNP alignments stored as nexus files and all resulting output files for running [PhyloNet](https://github.com/NakhlehLab/PhyloNet) are available here:
-    > <https://devonderaad.github.io/todiramphus.radseq/phylonet>
+    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/phylonet>
 
 ### ABBA/BABA tests for gene flow
 *   We used [Dsuite](https://github.com/millanek/Dsuite) to perform ABBA/BABA tests for excess allele sharing between non-sister taxa across the phylogeny. The code, input files, and output files resulting from running Dsuite are all available here:
