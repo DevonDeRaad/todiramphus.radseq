@@ -22,6 +22,10 @@ This repository will contain a comprehensive compilation of code and expalantory
 ### Population genetic analyses
 *   The three descriptive pop-gen analyses performed to determine individual sample relatedness using [SplitsTree](https://doi.org/10.1093/molbev/msj030), sample clustering using [popVAE](https://github.com/kr-colab/popvae), and genetic diversity using [Stacks 'populations' module](https://catchenlab.life.illinois.edu/stacks/comp/populations.php) are available for viewing here:
     > <https://devonderaad.github.io/todiramphus.radseq/todi.popgen.html>
+    
+### ADMIXTURE runs
+*   Information detailing our use of the program [ADMIXTURE](https://dalexander.github.io/admixture/) on this dataset can be found here:
+    > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/admixture>
  
  ### Pairwise divergence matrices
 *   All steps involved in creating pairwise divergence matrices for both mtDNA and nDNA data are available for viewing here:
