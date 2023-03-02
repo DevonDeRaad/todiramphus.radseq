@@ -1,0 +1,3 @@
+# Dsuite details
+
+This folder holds all of the output files from the Dsuite run, and the visualizations automatically created by the program. 'todi.unlinked.85.vcf' is the input file used to for the tests which includes all ~7K filtered SNPs and 83 samples. Files that begin with the prefix 'unlinked' used the linkage thinned SNP dataset as a sanity check to make sure both datasets gave similar results. Files with the prefix 'all' used the full SNP dataset. 'pops_allSNPs_BBAA.txt' is identical to Table 1 in the paper. 'cluster.Dsuite.commands.txt' shows the exact commands run on the KUHPCC to generate Dsuite results.
