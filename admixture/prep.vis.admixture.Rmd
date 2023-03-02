@@ -1,0 +1,353 @@
+---
+title: "prepare and vis ADMIXTURE"
+author: "Devon DeRaad"
+date: "4/4/2022"
+output: html_document
+---
+
+```{r}
+library(vcfR)
+library(SNPfiltR)
+library(ggplot2)
+```
+
+### Filter input SNP files based on MAC to increase signal to noise ratio
+```{r}
+#bring in sample info
+#read in sample info csv
+sample.info<-read.csv("~/Desktop/todi.2022/todiramphus.subset.csv")
+#filter input vcf by MAC in order to increase signal to noise ratio for ADMIXTURE analysis
+#read in filtered vcf
+vcfR <- read.vcfR("~/Desktop/todi.2022/todi.unlinked.85.vcf")
+vcfR
+#filter by MAC thresholds
+vcf.2<-min_mac(vcfR, min.mac = 2)
+vcf.2
+#filter by MAC thresholds
+vcf.5<-min_mac(vcfR, min.mac = 5)
+vcf.5
+#filter by MAC thresholds
+vcf.10<-min_mac(vcfR, min.mac = 10)
+vcf.10
+#write out vcf file
+vcfR::write.vcf(vcf.2, file="~/Downloads/todi.mac2.vcf.gz")
+vcfR::write.vcf(vcf.5, file="~/Downloads/todi.mac5.vcf.gz")
+vcfR::write.vcf(vcf.10, file="~/Downloads/todi.mac10.vcf.gz")
+
+#try removing sanctus
+colnames(vcfR@gt)
+vcf.2a<-vcfR[,c(1:26,57:77,83,84)]
+colnames(vcf.2a@gt)
+#remove invariant snps and singletons
+vcf.2a<-min_mac(vcf.2a, min.mac = 2)
+vcfR::write.vcf(vcf.2a, file="~/Downloads/todi.nosanctus.vcf.gz")
+#try downsampling sanctus
+vcf.2b<-vcfR[,c(1:34,57:77,83,84)]
+colnames(vcf.2b@gt)
+#remove invariant snps and singletons
+vcf.2b<-min_mac(vcf.2b, min.mac = 2)
+vcfR::write.vcf(vcf.2b, file="~/Downloads/todi.downsamplesanctus.vcf.gz")
+```
+
+# Show K=10 comparisons (sample order is the same in all plots throughout)
+```{r}
+knitr::include_graphics("/Users/devder/Desktop/todi.2022/admixture/k10.comparisons.png")
+```
+
+### Visualize ADMIXTURE results no MAC filter
+```{r}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture/")
+#read in log error values to determine optimal K
+log<-read.table("log.errors.txt")[,c(3:4)]
+#use double backslash to interpret the opening parentheses literally in the regular expression
+log$V3<-gsub("\\(K=", "", log$V3)
+log$V3<-gsub("):", "", log$V3)
+#interpret K values as numerical
+log$V3<-as.numeric(log$V3)
+#rename columns
+colnames(log)<-c("Kvalue","cross.validation.error")
+#make plot showing the cross validation error across K values 1:10
+ggplot(data=log, aes(x=Kvalue, y=cross.validation.error, group=1)) +
+  geom_line(linetype = "dashed")+
+  geom_point()+
+  ylab("cross-validation error")+
+  xlab("K")+
+  scale_x_continuous(breaks = c(1:10))+
+  theme_classic()
+```
+
+```{r, fig.height=10, fig.width=8}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture/")
+#read in input file in order to get list of input samples in order
+samps<-read.table("binary_fileset.fam")[,1]
+#reorder sampling df to match order of the plot
+sample.info<-sample.info[match(samps, sample.info$id),]
+sample.info$id == samps
+#read in all ten runs and save each dataframe in a list
+runs<-list()
+#read in log files
+for (i in 1:10){
+  runs[[i]]<-read.table(paste0("binary_fileset.", i, ".Q"))
+}
+par(mfrow=c(5,1))
+#plot each run
+for (i in 1:5){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+
+for (i in 6:10){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+
+```
+
+### Visualize ADMIXTURE results with MAC 2 filter
+```{r}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture.mac2/")
+#read in log error values to determine optimal K
+log<-read.table("log.errors.txt")[,c(3:4)]
+#use double backslash to interpret the opening parentheses literally in the regular expression
+log$V3<-gsub("\\(K=", "", log$V3)
+log$V3<-gsub("):", "", log$V3)
+#interpret K values as numerical
+log$V3<-as.numeric(log$V3)
+#rename columns
+colnames(log)<-c("Kvalue","cross.validation.error")
+#make plot showing the cross validation error across K values 1:10
+ggplot(data=log, aes(x=Kvalue, y=cross.validation.error, group=1)) +
+  geom_line(linetype = "dashed")+
+  geom_point()+
+  ylab("cross-validation error")+
+  xlab("K")+
+  scale_x_continuous(breaks = c(1:10))+
+  theme_classic()
+```
+
+```{r, fig.height=10, fig.width=8}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture.mac2/")
+#read in input file in order to get list of input samples in order
+samps<-read.table("binary_fileset.fam")[,1]
+#reorder sampling df to match order of the plot
+sample.info<-sample.info[match(samps, sample.info$id),]
+sample.info$id == samps
+sample.info$id
+#read in all ten runs and save each dataframe in a list
+runs<-list()
+#read in log files
+for (i in 1:10){
+  runs[[i]]<-read.table(paste0("binary_fileset.", i, ".Q"))
+}
+par(mfrow=c(5,1))
+#plot each run
+for (i in 1:5){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+for (i in 6:10){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+```
+
+### Visualize ADMIXTURE results with MAC 5 filter
+```{r}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture.mac5/")
+#read in log error values to determine optimal K
+log<-read.table("log.errors.txt")[,c(3:4)]
+#use double backslash to interpret the opening parentheses literally in the regular expression
+log$V3<-gsub("\\(K=", "", log$V3)
+log$V3<-gsub("):", "", log$V3)
+#interpret K values as numerical
+log$V3<-as.numeric(log$V3)
+#rename columns
+colnames(log)<-c("Kvalue","cross.validation.error")
+#make plot showing the cross validation error across K values 1:10
+ggplot(data=log, aes(x=Kvalue, y=cross.validation.error, group=1)) +
+  geom_line(linetype = "dashed")+
+  geom_point()+
+  ylab("cross-validation error")+
+  xlab("K")+
+  scale_x_continuous(breaks = c(1:10))+
+  theme_classic()
+```
+
+```{r, fig.height=10, fig.width=8}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture.mac5/")
+#read in input file in order to get list of input samples in order
+samps<-read.table("binary_fileset.fam")[,1]
+#reorder sampling df to match order of the plot
+sample.info<-sample.info[match(samps, sample.info$id),]
+sample.info$id == samps
+#read in all ten runs and save each dataframe in a list
+runs<-list()
+#read in log files
+for (i in 1:10){
+  runs[[i]]<-read.table(paste0("binary_fileset.", i, ".Q"))
+}
+par(mfrow=c(5,1))
+#plot each run
+for (i in 1:5){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+for (i in 6:10){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+```
+
+
+### Visualize ADMIXTURE results with MAC 10 filter
+```{r}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture.mac10/")
+#read in log error values to determine optimal K
+log<-read.table("log.errors.txt")[,c(3:4)]
+#use double backslash to interpret the opening parentheses literally in the regular expression
+log$V3<-gsub("\\(K=", "", log$V3)
+log$V3<-gsub("):", "", log$V3)
+#interpret K values as numerical
+log$V3<-as.numeric(log$V3)
+#rename columns
+colnames(log)<-c("Kvalue","cross.validation.error")
+#make plot showing the cross validation error across K values 1:10
+ggplot(data=log, aes(x=Kvalue, y=cross.validation.error, group=1)) +
+  geom_line(linetype = "dashed")+
+  geom_point()+
+  ylab("cross-validation error")+
+  xlab("K")+
+  scale_x_continuous(breaks = c(1:10))+
+  theme_classic()
+```
+
+```{r, fig.height=10, fig.width=8}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture.mac10/")
+#read in input file in order to get list of input samples in order
+samps<-read.table("binary_fileset.fam")[,1]
+#reorder sampling df to match order of the plot
+sample.info<-sample.info[match(samps, sample.info$id),]
+sample.info$id == samps
+#read in all ten runs and save each dataframe in a list
+runs<-list()
+#read in log files
+for (i in 1:10){
+  runs[[i]]<-read.table(paste0("binary_fileset.", i, ".Q"))
+}
+par(mfrow=c(5,1))
+#plot each run
+for (i in 1:5){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+for (i in 6:10){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+```
+
+# show separate run with no sanctus and MAC=2
+```{r}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture.nosanctus/")
+#read in log error values to determine optimal K
+log<-read.table("log.errors.txt")[,c(3:4)]
+#use double backslash to interpret the opening parentheses literally in the regular expression
+log$V3<-gsub("\\(K=", "", log$V3)
+log$V3<-gsub("):", "", log$V3)
+#interpret K values as numerical
+log$V3<-as.numeric(log$V3)
+#rename columns
+colnames(log)<-c("Kvalue","cross.validation.error")
+#make plot showing the cross validation error across K values 1:10
+ggplot(data=log, aes(x=Kvalue, y=cross.validation.error, group=1)) +
+  geom_line(linetype = "dashed")+
+  geom_point()+
+  ylab("cross-validation error")+
+  xlab("K")+
+  scale_x_continuous(breaks = c(1:10))+
+  theme_classic()
+
+#read in input file in order to get list of input samples in order
+samps<-read.table("binary_fileset.fam")[,1]
+#reorder sampling df to match order of the plot
+sample.info<-sample.info[match(samps, sample.info$id),]
+sample.info$id == samps
+#read in all ten runs and save each dataframe in a list
+runs<-list()
+#read in log files
+for (i in 1:10){
+  runs[[i]]<-read.table(paste0("binary_fileset.", i, ".Q"))
+}
+par(mfrow=c(1,1))
+#plot each run
+for (i in 1:5){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+for (i in 6:10){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+```
+
+### so what we see is that removing sanctus completely solves this problem, and even allows structure to separate albicilla and saurophagus! So someone might say, this is just a hierarchical issue. But the thing is, sanctus is not the outgroup! Leucopygius is the first branching, and doesn't affect the ability of any of the other groups to cluster accurately, so this is fundamentally a separate issue from hierarchical structure masking lower level structure. And it makes it hard for empirical systems like this because there is not much justification for removing a random ingroup.
+```{r}
+#optimal K=7 shown here
+knitr::include_graphics("/Users/devder/Desktop/todi.2022/admixture.nosanctus/labeled.barplot.png")
+```
+
+
+# what if we just downsample sanctus to 10 samples and set MAC=2
+```{r}
+#setwd to admixture directory run on the cluster
+setwd("~/Desktop/todi.2022/admixture.downsamplesanctus/")
+#read in log error values to determine optimal K
+log<-read.table("log.errors.txt")[,c(3:4)]
+#use double backslash to interpret the opening parentheses literally in the regular expression
+log$V3<-gsub("\\(K=", "", log$V3)
+log$V3<-gsub("):", "", log$V3)
+#interpret K values as numerical
+log$V3<-as.numeric(log$V3)
+#rename columns
+colnames(log)<-c("Kvalue","cross.validation.error")
+#make plot showing the cross validation error across K values 1:10
+ggplot(data=log, aes(x=Kvalue, y=cross.validation.error, group=1)) +
+  geom_line(linetype = "dashed")+
+  geom_point()+
+  ylab("cross-validation error")+
+  xlab("K")+
+  scale_x_continuous(breaks = c(1:10))+
+  theme_classic()
+
+#read in input file in order to get list of input samples in order
+samps<-read.table("binary_fileset.fam")[,1]
+#reorder sampling df to match order of the plot
+sample.info<-sample.info[match(samps, sample.info$id),]
+sample.info$id == samps
+#read in all ten runs and save each dataframe in a list
+runs<-list()
+#read in log files
+for (i in 1:10){
+  runs[[i]]<-read.table(paste0("binary_fileset.", i, ".Q"))
+}
+par(mfrow=c(1,1))
+#plot each run
+for (i in 1:5){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+for (i in 6:10){
+barplot(t(as.matrix(runs[[i]])), col=rainbow(i), ylab="Ancestry", border="black")
+}
+```
+
+# show plots labeled
+```{r}
+#optimal k=6
+knitr::include_graphics("/Users/devder/Desktop/todi.2022/admixture.downsamplesanctus/k6.labeled.png")
+
+#here is k=9
+knitr::include_graphics("/Users/devder/Desktop/todi.2022/admixture.downsamplesanctus/k9.labeled.png")
+```
+
+### so downsampling sanctus certainly helps, but does not fix the problem. ADMIXTURE still refuses to split albicilla and saurophagus in the presence of sanctus, and starts adding spurious ancestry groups to sanctus
+
+### I think this does solve our problem for this paper though, because the k=6 graph above can be paired with a solo albicilla/saurophagus plot to show the entire structure of the group.
