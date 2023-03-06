@@ -1,0 +1,40 @@
+---
+title: "vis.treemix.results"
+author: "Devon DeRaad"
+date: '2022-07-18'
+output: html_document
+---
+
+```{r}
+#step 1: copy the entire treemix outdirectory from the KU cluster to my local machine
+#scp -r d669d153@hpc.crc.ku.edu:/home/d669d153/work/aph.rad/treemix /Users/devder/Desktop/aph.data/
+
+#step 2: source plotting functions that are distributed with treemix
+source("~/Downloads/plotting_funcs.R")
+
+#step 3: move into the treemix output directory and plot trees
+setwd("~/Desktop/todi.2022/treemix/")
+#setwd("~/Downloads/treemix") #preliminary results
+#0 edge
+plot_tree("treem0")
+#1 edge
+plot_tree("treem1", plus = 0.02, arrow=.1, ybar = 0, scale=F, lwd=1.5)
+#2 edges
+plot_tree("treem2")
+#3 edges
+plot_tree("treem3")
+```
+
+```{r}
+setwd("~/Desktop/todi.2022/treemix/")
+#plot to see how much variance is explained by each edge
+m=NULL
+for(i in 0:3){
+  m[i+1] <- get_f(paste0("treem",i))
+}
+
+m
+plot(seq(0,3),m,pch="*",cex=2,col="blue", type="b",xlab="migration edge number", ylab="% explained variance")
+
+```
+

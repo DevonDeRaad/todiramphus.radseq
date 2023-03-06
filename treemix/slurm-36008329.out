@@ -1,0 +1,50 @@
+Logging to './todi.unlinked.85.p.log'.
+Locus/sample distributions will be written to './todi.unlinked.85.p.log.distribs'.
+populations parameters selected:
+  Input mode: VCF
+  Percent samples limit per population: 0
+  Locus Population limit: 1
+  Percent samples overall: 0
+  Minor allele frequency cutoff: 0
+  Maximum observed heterozygosity cutoff: 1
+  Applying Fst correction: none.
+  Pi/Fis kernel smoothing: off
+  Fstats kernel smoothing: off
+  Bootstrap resampling: off
+
+Parsing population map...
+Error: Failed to open population map file '8spec.map.txt'.
+Aborted.
+tail: cannot open ‘todi.unlinked.85.p.treemix’ for reading: No such file or directory
+gsl: init_source.c:29: ERROR: matrix dimension n1 must be positive integer
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:0 nsnp:0
+Default GSL error handler invoked.
+/var/spool/slurmd/job36008329/slurm_script: line 19: 115579 Aborted                 (core dumped) /panfs/pfs.local/work/bi/bin/treemix-1.13/src/treemix -i todi.unlinked.85.p.treemix.gz -root coerulescens -o treem0
+gsl: init_source.c:29: ERROR: matrix dimension n1 must be positive integer
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:0 nsnp:0
+Default GSL error handler invoked.
+/var/spool/slurmd/job36008329/slurm_script: line 22: 115580 Aborted                 (core dumped) /panfs/pfs.local/work/bi/bin/treemix-1.13/src/treemix -i todi.unlinked.85.p.treemix.gz -m 1 -g treem0.vertices.gz treem0.edges.gz -o treem1
+gsl: init_source.c:29: ERROR: matrix dimension n1 must be positive integer
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:0 nsnp:0
+Default GSL error handler invoked.
+/var/spool/slurmd/job36008329/slurm_script: line 25: 115581 Aborted                 (core dumped) /panfs/pfs.local/work/bi/bin/treemix-1.13/src/treemix -i todi.unlinked.85.p.treemix.gz -m 1 -g treem1.vertices.gz treem1.edges.gz -o treem2
+gsl: init_source.c:29: ERROR: matrix dimension n1 must be positive integer
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:0 nsnp:0
+Default GSL error handler invoked.
+/var/spool/slurmd/job36008329/slurm_script: line 28: 115582 Aborted                 (core dumped) /panfs/pfs.local/work/bi/bin/treemix-1.13/src/treemix -i todi.unlinked.85.p.treemix.gz -m 1 -g treem2.vertices.gz treem2.edges.gz -o treem3

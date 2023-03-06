@@ -1,0 +1,98 @@
+populations v2.41, executed 2022-07-18 14:00:03 (zlib-1.2.7)
+/home/d669d153/work/stacks-2.41/populations --in_vcf todi.unlinked.85.vcf -O . --treemix -M 8spec.map.txt
+Locus/sample distributions will be written to './todi.unlinked.85.p.log.distribs'.
+populations parameters selected:
+  Input mode: VCF
+  Percent samples limit per population: 0
+  Locus Population limit: 1
+  Percent samples overall: 0
+  Minor allele frequency cutoff: 0
+  Maximum observed heterozygosity cutoff: 1
+  Applying Fst correction: none.
+  Pi/Fis kernel smoothing: off
+  Fstats kernel smoothing: off
+  Bootstrap resampling: off
+
+Parsing population map...
+The population map contained 83 samples, 8 population(s), 1 group(s).
+Opening the VCF file...
+Working on 83 samples.
+Working on 8 population(s):
+    albicilla: T_albicilla_22581, T_albicilla_22591, T_albicilla_22592, T_albicilla_22611, T_albicilla_85104, T_albicilla_85105
+    chloris: T_chloris_12584, T_chloris_12606, T_chloris_13960, T_chloris_14446, T_chloris_20983, T_chloris_22075, T_chloris_23253, T_chloris_23630, 
+             T_chloris_23632, T_chloris_24382, T_chloris_24727
+    colonus: T_colonus_2003089, T_colonus_2003097, T_colonus_2004070
+    leucopygius: T_leucopygius_32019, T_leucopygius_32037, T_leucopygius_34505, T_leucopygius_34508, T_leucopygius_DOT6654
+    sanctus: T_sanctus_14877, T_sanctus_14879, T_sanctus_24565, T_sanctus_25117, T_sanctus_33267, T_sanctus_34636, T_sanctus_34659, T_sanctus_35549, 
+             T_sanctus_72545, T_sanctus_7567, T_sanctus_B29435, T_sanctus_B32637, T_sanctus_B33280, T_sanctus_B34636, T_sanctus_B34659, 
+             T_sanctus_B34946, T_sanctus_B43266, T_sanctus_B50292, T_sanctus_B50543, T_sanctus_B51072, T_sanctus_B53055, T_sanctus_B53068, 
+             T_sanctus_B54673, T_sanctus_B57402, T_sanctus_B59372, T_sanctus_B60180, T_sanctus_B60181, T_sanctus_B60182, T_sanctus_B60183, 
+             T_sanctus_B60184, T_tristrami_33839, T_tristrami_33858, T_tristrami_33864, T_tristrami_33867, T_tristrami_33895
+    saurophagus: T_saurophagus_18929, T_saurophagus_27804, T_saurophagus_36179, T_saurophagus_36283, T_saurophagus_36284, T_saurophagus_69666
+    sordidus: T_sordidus_B33717, T_sordidus_B33718, T_sordidus_B33719, T_sordidus_B33720, T_sordidus_B44198, T_sordidus_B44295, T_sordidus_B44296, 
+              T_sordidus_B51462
+    tristrami: T_tristrami_18953, T_tristrami_27723, T_tristrami_27752, T_tristrami_27792, T_tristrami_27793, T_tristrami_32049, T_tristrami_33253, 
+               T_tristrami_36188, T_tristrami_6704
+Working on 1 group(s) of populations:
+    defaultgrp: albicilla, chloris, colonus, leucopygius, sanctus, saurophagus, sordidus, tristrami
+
+Per-population SNP allele counts will be written to './todi.unlinked.85.p.treemix'
+Genotyping markers will be written to './todi.unlinked.85.p.markers.tsv'
+Raw Genotypes/Haplotypes will be written to './todi.unlinked.85.p.haplotypes.tsv'
+Population-level summary statistics will be written to './todi.unlinked.85.p.sumstats.tsv'
+Population-level haplotype summary statistics will be written to './todi.unlinked.85.p.hapstats.tsv'
+
+Processing data in batches:
+  * load a batch of catalog loci and apply filters
+  * compute SNP- and haplotype-wise per-population statistics
+  * write the above statistics in the output files
+  * export the genotypes/haplotypes in specified format(s)
+More details in './todi.unlinked.85.p.log.distribs'.
+Now processing...
+Pseudo10_dna 
+Pseudo11_dna 
+Pseudo12_dna 
+Pseudo13_dna 
+Pseudo14_dna 
+Pseudo15_dna 
+Pseudo17_dna 
+Pseudo18_dna 
+Pseudo19_dna 
+Pseudo1A_dna 
+Pseudo1_dna 
+Pseudo20_dna 
+Pseudo22_dna 
+Pseudo23_dna 
+Pseudo24_dna 
+Pseudo26_dna 
+Pseudo2_dna 
+Pseudo3_dna 
+Pseudo4A_dna 
+Pseudo4_dna 
+Pseudo4_random_dna 
+Pseudo5_dna 
+Pseudo6_dna 
+Pseudo7_dna 
+Pseudo8_dna 
+Pseudo9_dna 
+PseudoZ_dna 
+PseudoZ_random_dna 
+108036_edges=1474018..1474018_left=118555_right=1335475_ver=1.7_style=4 
+133358_edges=1356969..1488116_left=1401318_right=655778_ver=1.7_style=4 
+Found 1892 SNP records in file 'todi.unlinked.85.vcf'. (Skipped 0 already filtered-out SNPs and 0 non-SNP records ; more with --verbose.)
+
+Removed 0 loci that did not pass sample/population constraints from 1892 loci.
+Kept 1892 loci, composed of 1892 sites; 0 of those sites were filtered, 1892 variant sites remained.
+    1892 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Mean genotyped sites per locus: 1.00bp (stderr 0.00).
+
+Population summary statistics (more detail in populations.sumstats_summary.tsv):
+  albicilla: 5.6497 samples per locus; pi: 0.0080884; all/variant/polymorphic sites: 1887/1887/45; private alleles: 33
+  chloris: 10.504 samples per locus; pi: 0.042817; all/variant/polymorphic sites: 1892/1892/308; private alleles: 188
+  colonus: 2.7267 samples per locus; pi: 0.01806; all/variant/polymorphic sites: 1866/1866/72; private alleles: 43
+  leucopygius: 4.2749 samples per locus; pi: 0.031712; all/variant/polymorphic sites: 1739/1739/153; private alleles: 322
+  sanctus: 32.504 samples per locus; pi: 0.070761; all/variant/polymorphic sites: 1892/1892/1001; private alleles: 785
+  saurophagus: 5.3995 samples per locus; pi: 0.0080309; all/variant/polymorphic sites: 1890/1890/43; private alleles: 22
+  sordidus: 7.4984 samples per locus; pi: 0.030604; all/variant/polymorphic sites: 1890/1890/186; private alleles: 81
+  tristrami: 8.1459 samples per locus; pi: 0.032522; all/variant/polymorphic sites: 1892/1892/217; private alleles: 115
+Populations is done.

@@ -1,0 +1,149 @@
+# Note: Individual distributions can be extracted using the `stacks-dist-extract` utility.
+#       e.g. `stacks-dist-extract todi.unlinked.85.p.log.distribs dist_name`
+
+BEGIN batch_progress
+Pseudo10_dna: analyzed 36 loci; filtered 0 loci; 36 loci seen.
+    36 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo11_dna: analyzed 25 loci; filtered 0 loci; 25 loci seen.
+    25 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo12_dna: analyzed 17 loci; filtered 0 loci; 17 loci seen.
+    17 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo13_dna: analyzed 24 loci; filtered 0 loci; 24 loci seen.
+    24 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo14_dna: analyzed 27 loci; filtered 0 loci; 27 loci seen.
+    27 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo15_dna: analyzed 4 loci; filtered 0 loci; 4 loci seen.
+    4 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo17_dna: analyzed 8 loci; filtered 0 loci; 8 loci seen.
+    8 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo18_dna: analyzed 15 loci; filtered 0 loci; 15 loci seen.
+    15 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo19_dna: analyzed 9 loci; filtered 0 loci; 9 loci seen.
+    9 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo1A_dna: analyzed 152 loci; filtered 0 loci; 152 loci seen.
+    152 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo1_dna: analyzed 302 loci; filtered 0 loci; 302 loci seen.
+    302 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo20_dna: analyzed 18 loci; filtered 0 loci; 18 loci seen.
+    18 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo22_dna: analyzed 2 loci; filtered 0 loci; 2 loci seen.
+    2 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo23_dna: analyzed 2 loci; filtered 0 loci; 2 loci seen.
+    2 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo24_dna: analyzed 3 loci; filtered 0 loci; 3 loci seen.
+    3 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo26_dna: analyzed 3 loci; filtered 0 loci; 3 loci seen.
+    3 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo2_dna: analyzed 334 loci; filtered 0 loci; 334 loci seen.
+    334 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo3_dna: analyzed 238 loci; filtered 0 loci; 238 loci seen.
+    238 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo4A_dna: analyzed 43 loci; filtered 0 loci; 43 loci seen.
+    43 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo4_dna: analyzed 114 loci; filtered 0 loci; 114 loci seen.
+    114 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo4_random_dna: analyzed 5 loci; filtered 0 loci; 5 loci seen.
+    5 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo5_dna: analyzed 144 loci; filtered 0 loci; 144 loci seen.
+    144 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo6_dna: analyzed 78 loci; filtered 0 loci; 78 loci seen.
+    78 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo7_dna: analyzed 63 loci; filtered 0 loci; 63 loci seen.
+    63 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo8_dna: analyzed 32 loci; filtered 0 loci; 32 loci seen.
+    32 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Pseudo9_dna: analyzed 26 loci; filtered 0 loci; 26 loci seen.
+    26 genomic sites, of which 0 were covered by multiple loci (0.0%).
+PseudoZ_dna: analyzed 162 loci; filtered 0 loci; 162 loci seen.
+    162 genomic sites, of which 0 were covered by multiple loci (0.0%).
+PseudoZ_random_dna: analyzed 2 loci; filtered 0 loci; 2 loci seen.
+    2 genomic sites, of which 0 were covered by multiple loci (0.0%).
+108036_edges=1474018..1474018_left=118555_right=1335475_ver=1.7_style=4: analyzed 2 loci; filtered 0 loci; 2 loci seen.
+    2 genomic sites, of which 0 were covered by multiple loci (0.0%).
+133358_edges=1356969..1488116_left=1401318_right=655778_ver=1.7_style=4: analyzed 2 loci; filtered 0 loci; 2 loci seen.
+    2 genomic sites, of which 0 were covered by multiple loci (0.0%).
+END batch_progress
+
+BEGIN samples_per_loc_prefilters
+# Distribution of valid samples matched to a catalog locus prior to filtering.
+n_samples	n_loci
+71	206
+72	176
+73	177
+74	157
+75	142
+76	139
+77	145
+78	140
+79	141
+80	162
+81	135
+82	104
+83	68
+END samples_per_loc_prefilters
+
+BEGIN missing_samples_per_loc_prefilters
+# Distribution of missing samples for each catalog locus prior to filtering.
+# Absent samples at locus	Count
+0	68
+1	104
+2	135
+3	162
+4	141
+5	140
+6	145
+7	139
+8	142
+9	157
+10	177
+11	176
+12	206
+END missing_samples_per_loc_prefilters
+
+BEGIN snps_per_loc_prefilters
+# Distribution of the number of SNPs per catalog locus prior to filtering.
+n_snps	n_loci
+1	1892
+END snps_per_loc_prefilters
+
+BEGIN samples_per_loc_postfilters
+# Distribution of valid samples matched to a catalog locus after filtering.
+n_samples	n_loci
+71	206
+72	176
+73	177
+74	157
+75	142
+76	139
+77	145
+78	140
+79	141
+80	162
+81	135
+82	104
+83	68
+END samples_per_loc_postfilters
+
+BEGIN missing_samples_per_loc_postfilters
+# Distribution of missing samples for each catalog locus after filtering.
+# Absent samples at locus	Count
+0	68
+1	104
+2	135
+3	162
+4	141
+5	140
+6	145
+7	139
+8	142
+9	157
+10	177
+11	176
+12	206
+END missing_samples_per_loc_postfilters
+
+BEGIN snps_per_loc_postfilters
+# Distribution of the number of SNPs per catalog locus (after filtering).
+n_snps	n_loci
+1	1892
+END snps_per_loc_postfilters

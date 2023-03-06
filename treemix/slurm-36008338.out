@@ -1,0 +1,1098 @@
+Logging to './todi.unlinked.85.p.log'.
+Locus/sample distributions will be written to './todi.unlinked.85.p.log.distribs'.
+populations parameters selected:
+  Input mode: VCF
+  Percent samples limit per population: 0
+  Locus Population limit: 1
+  Percent samples overall: 0
+  Minor allele frequency cutoff: 0
+  Maximum observed heterozygosity cutoff: 1
+  Applying Fst correction: none.
+  Pi/Fis kernel smoothing: off
+  Fstats kernel smoothing: off
+  Bootstrap resampling: off
+
+Parsing population map...
+The population map contained 83 samples, 8 population(s), 1 group(s).
+Opening the VCF file...
+Working on 83 samples.
+Working on 8 population(s):
+    albicilla: T_albicilla_22581, T_albicilla_22591, T_albicilla_22592, T_albicilla_22611, T_albicilla_85104, T_albicilla_85105
+    chloris: T_chloris_12584, T_chloris_12606, T_chloris_13960, T_chloris_14446, T_chloris_20983, T_chloris_22075, T_chloris_23253, T_chloris_23630, 
+             T_chloris_23632, T_chloris_24382, T_chloris_24727
+    colonus: T_colonus_2003089, T_colonus_2003097, T_colonus_2004070
+    leucopygius: T_leucopygius_32019, T_leucopygius_32037, T_leucopygius_34505, T_leucopygius_34508, T_leucopygius_DOT6654
+    sanctus: T_sanctus_14877, T_sanctus_14879, T_sanctus_24565, T_sanctus_25117, T_sanctus_33267, T_sanctus_34636, T_sanctus_34659, T_sanctus_35549, 
+             T_sanctus_72545, T_sanctus_7567, T_sanctus_B29435, T_sanctus_B32637, T_sanctus_B33280, T_sanctus_B34636, T_sanctus_B34659, 
+             T_sanctus_B34946, T_sanctus_B43266, T_sanctus_B50292, T_sanctus_B50543, T_sanctus_B51072, T_sanctus_B53055, T_sanctus_B53068, 
+             T_sanctus_B54673, T_sanctus_B57402, T_sanctus_B59372, T_sanctus_B60180, T_sanctus_B60181, T_sanctus_B60182, T_sanctus_B60183, 
+             T_sanctus_B60184, T_tristrami_33839, T_tristrami_33858, T_tristrami_33864, T_tristrami_33867, T_tristrami_33895
+    saurophagus: T_saurophagus_18929, T_saurophagus_27804, T_saurophagus_36179, T_saurophagus_36283, T_saurophagus_36284, T_saurophagus_69666
+    sordidus: T_sordidus_B33717, T_sordidus_B33718, T_sordidus_B33719, T_sordidus_B33720, T_sordidus_B44198, T_sordidus_B44295, T_sordidus_B44296, 
+              T_sordidus_B51462
+    tristrami: T_tristrami_18953, T_tristrami_27723, T_tristrami_27752, T_tristrami_27792, T_tristrami_27793, T_tristrami_32049, T_tristrami_33253, 
+               T_tristrami_36188, T_tristrami_6704
+Working on 1 group(s) of populations:
+    defaultgrp: albicilla, chloris, colonus, leucopygius, sanctus, saurophagus, sordidus, tristrami
+
+Per-population SNP allele counts will be written to './todi.unlinked.85.p.treemix'
+Genotyping markers will be written to './todi.unlinked.85.p.markers.tsv'
+Raw Genotypes/Haplotypes will be written to './todi.unlinked.85.p.haplotypes.tsv'
+Population-level summary statistics will be written to './todi.unlinked.85.p.sumstats.tsv'
+Population-level haplotype summary statistics will be written to './todi.unlinked.85.p.hapstats.tsv'
+
+Processing data in batches:
+  * load a batch of catalog loci and apply filters
+  * compute SNP- and haplotype-wise per-population statistics
+  * write the above statistics in the output files
+  * export the genotypes/haplotypes in specified format(s)
+More details in './todi.unlinked.85.p.log.distribs'.
+Now processing...
+Pseudo10_dna 
+Pseudo11_dna 
+Pseudo12_dna 
+Pseudo13_dna 
+Pseudo14_dna 
+Pseudo15_dna 
+Pseudo17_dna 
+Pseudo18_dna 
+Pseudo19_dna 
+Pseudo1A_dna 
+Pseudo1_dna 
+Pseudo20_dna 
+Pseudo22_dna 
+Pseudo23_dna 
+Pseudo24_dna 
+Pseudo26_dna 
+Pseudo2_dna 
+Pseudo3_dna 
+Pseudo4A_dna 
+Pseudo4_dna 
+Pseudo4_random_dna 
+Pseudo5_dna 
+Pseudo6_dna 
+Pseudo7_dna 
+Pseudo8_dna 
+Pseudo9_dna 
+PseudoZ_dna 
+PseudoZ_random_dna 
+108036_edges=1474018..1474018_left=118555_right=1335475_ver=1.7_style=4 
+133358_edges=1356969..1488116_left=1401318_right=655778_ver=1.7_style=4 
+Found 1892 SNP records in file 'todi.unlinked.85.vcf'. (Skipped 0 already filtered-out SNPs and 0 non-SNP records ; more with --verbose.)
+
+Removed 0 loci that did not pass sample/population constraints from 1892 loci.
+Kept 1892 loci, composed of 1892 sites; 0 of those sites were filtered, 1892 variant sites remained.
+    1892 genomic sites, of which 0 were covered by multiple loci (0.0%).
+Mean genotyped sites per locus: 1.00bp (stderr 0.00).
+
+Population summary statistics (more detail in populations.sumstats_summary.tsv):
+  albicilla: 5.6497 samples per locus; pi: 0.0080884; all/variant/polymorphic sites: 1887/1887/45; private alleles: 33
+  chloris: 10.504 samples per locus; pi: 0.042817; all/variant/polymorphic sites: 1892/1892/308; private alleles: 188
+  colonus: 2.7267 samples per locus; pi: 0.01806; all/variant/polymorphic sites: 1866/1866/72; private alleles: 43
+  leucopygius: 4.2749 samples per locus; pi: 0.031712; all/variant/polymorphic sites: 1739/1739/153; private alleles: 322
+  sanctus: 32.504 samples per locus; pi: 0.070761; all/variant/polymorphic sites: 1892/1892/1001; private alleles: 785
+  saurophagus: 5.3995 samples per locus; pi: 0.0080309; all/variant/polymorphic sites: 1890/1890/43; private alleles: 22
+  sordidus: 7.4984 samples per locus; pi: 0.030604; all/variant/polymorphic sites: 1890/1890/186; private alleles: 81
+  tristrami: 8.1459 samples per locus; pi: 0.032522; all/variant/polymorphic sites: 1892/1892/217; private alleles: 115
+Populations is done.
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:8 nsnp:1892
+WARNING: no counts at SNP 1 population 0
+WARNING: no counts at SNP 34 population 2
+WARNING: no counts at SNP 50 population 3
+WARNING: no counts at SNP 51 population 3
+WARNING: no counts at SNP 70 population 3
+WARNING: no counts at SNP 73 population 0
+WARNING: no counts at SNP 94 population 3
+WARNING: no counts at SNP 95 population 3
+WARNING: no counts at SNP 127 population 3
+WARNING: no counts at SNP 128 population 3
+WARNING: no counts at SNP 131 population 3
+WARNING: no counts at SNP 132 population 3
+WARNING: no counts at SNP 147 population 2
+WARNING: no counts at SNP 152 population 3
+WARNING: no counts at SNP 153 population 3
+WARNING: no counts at SNP 160 population 3
+WARNING: no counts at SNP 167 population 2
+WARNING: no counts at SNP 169 population 3
+WARNING: no counts at SNP 170 population 3
+WARNING: no counts at SNP 211 population 3
+WARNING: no counts at SNP 271 population 3
+WARNING: no counts at SNP 284 population 2
+WARNING: no counts at SNP 301 population 3
+WARNING: no counts at SNP 302 population 3
+WARNING: no counts at SNP 324 population 3
+WARNING: no counts at SNP 341 population 3
+WARNING: no counts at SNP 348 population 3
+WARNING: no counts at SNP 374 population 3
+WARNING: no counts at SNP 375 population 3
+WARNING: no counts at SNP 382 population 3
+WARNING: no counts at SNP 387 population 3
+WARNING: no counts at SNP 390 population 2
+WARNING: no counts at SNP 391 population 2
+WARNING: no counts at SNP 404 population 3
+WARNING: no counts at SNP 408 population 3
+WARNING: no counts at SNP 409 population 3
+WARNING: no counts at SNP 440 population 3
+WARNING: no counts at SNP 471 population 2
+WARNING: no counts at SNP 480 population 2
+WARNING: no counts at SNP 481 population 2
+WARNING: no counts at SNP 493 population 3
+WARNING: no counts at SNP 509 population 3
+WARNING: no counts at SNP 520 population 3
+WARNING: no counts at SNP 521 population 3
+WARNING: no counts at SNP 522 population 3
+WARNING: no counts at SNP 523 population 3
+WARNING: no counts at SNP 551 population 2
+WARNING: no counts at SNP 554 population 3
+WARNING: no counts at SNP 557 population 3
+WARNING: no counts at SNP 558 population 3
+WARNING: no counts at SNP 567 population 3
+WARNING: no counts at SNP 569 population 3
+WARNING: no counts at SNP 590 population 3
+WARNING: no counts at SNP 591 population 3
+WARNING: no counts at SNP 594 population 2
+WARNING: no counts at SNP 619 population 3
+WARNING: no counts at SNP 620 population 3
+WARNING: no counts at SNP 639 population 3
+WARNING: no counts at SNP 640 population 3
+WARNING: no counts at SNP 652 population 3
+WARNING: no counts at SNP 653 population 3
+WARNING: no counts at SNP 666 population 5
+WARNING: no counts at SNP 673 population 3
+WARNING: no counts at SNP 676 population 3
+WARNING: no counts at SNP 700 population 3
+WARNING: no counts at SNP 701 population 3
+WARNING: no counts at SNP 729 population 3
+WARNING: no counts at SNP 730 population 3
+WARNING: no counts at SNP 746 population 2
+WARNING: no counts at SNP 749 population 3
+WARNING: no counts at SNP 750 population 3
+WARNING: no counts at SNP 766 population 3
+WARNING: no counts at SNP 767 population 3
+WARNING: no counts at SNP 768 population 3
+WARNING: no counts at SNP 782 population 3
+WARNING: no counts at SNP 787 population 3
+WARNING: no counts at SNP 788 population 3
+WARNING: no counts at SNP 800 population 3
+WARNING: no counts at SNP 803 population 3
+WARNING: no counts at SNP 804 population 3
+WARNING: no counts at SNP 808 population 2
+WARNING: no counts at SNP 813 population 3
+WARNING: no counts at SNP 814 population 3
+WARNING: no counts at SNP 818 population 3
+WARNING: no counts at SNP 845 population 2
+WARNING: no counts at SNP 846 population 2
+WARNING: no counts at SNP 877 population 3
+WARNING: no counts at SNP 878 population 3
+WARNING: no counts at SNP 883 population 3
+WARNING: no counts at SNP 900 population 3
+WARNING: no counts at SNP 901 population 3
+WARNING: no counts at SNP 907 population 3
+WARNING: no counts at SNP 925 population 3
+WARNING: no counts at SNP 926 population 3
+WARNING: no counts at SNP 955 population 3
+WARNING: no counts at SNP 956 population 3
+WARNING: no counts at SNP 962 population 3
+WARNING: no counts at SNP 963 population 3
+WARNING: no counts at SNP 970 population 3
+WARNING: no counts at SNP 998 population 3
+WARNING: no counts at SNP 1001 population 3
+WARNING: no counts at SNP 1002 population 3
+WARNING: no counts at SNP 1017 population 3
+WARNING: no counts at SNP 1018 population 3
+WARNING: no counts at SNP 1032 population 3
+WARNING: no counts at SNP 1033 population 3
+WARNING: no counts at SNP 1034 population 3
+WARNING: no counts at SNP 1044 population 0
+WARNING: no counts at SNP 1045 population 0
+WARNING: no counts at SNP 1070 population 3
+WARNING: no counts at SNP 1071 population 3
+WARNING: no counts at SNP 1079 population 2
+WARNING: no counts at SNP 1095 population 3
+WARNING: no counts at SNP 1096 population 3
+WARNING: no counts at SNP 1097 population 3
+WARNING: no counts at SNP 1140 population 2
+WARNING: no counts at SNP 1158 population 2
+WARNING: no counts at SNP 1170 population 3
+WARNING: no counts at SNP 1171 population 3
+WARNING: no counts at SNP 1176 population 3
+WARNING: no counts at SNP 1182 population 3
+WARNING: no counts at SNP 1183 population 3
+WARNING: no counts at SNP 1222 population 3
+WARNING: no counts at SNP 1223 population 3
+WARNING: no counts at SNP 1226 population 3
+WARNING: no counts at SNP 1232 population 3
+WARNING: no counts at SNP 1233 population 3
+WARNING: no counts at SNP 1235 population 3
+WARNING: no counts at SNP 1236 population 3
+WARNING: no counts at SNP 1251 population 2
+WARNING: no counts at SNP 1255 population 3
+WARNING: no counts at SNP 1256 population 3
+WARNING: no counts at SNP 1257 population 3
+WARNING: no counts at SNP 1258 population 3
+WARNING: no counts at SNP 1294 population 3
+WARNING: no counts at SNP 1302 population 3
+WARNING: no counts at SNP 1303 population 3
+WARNING: no counts at SNP 1323 population 3
+WARNING: no counts at SNP 1332 population 3
+WARNING: no counts at SNP 1333 population 3
+WARNING: no counts at SNP 1337 population 2
+WARNING: no counts at SNP 1344 population 3
+WARNING: no counts at SNP 1373 population 3
+WARNING: no counts at SNP 1384 population 3
+WARNING: no counts at SNP 1428 population 3
+WARNING: no counts at SNP 1439 population 3
+WARNING: no counts at SNP 1440 population 3
+WARNING: no counts at SNP 1510 population 3
+WARNING: no counts at SNP 1511 population 3
+WARNING: no counts at SNP 1523 population 3
+WARNING: no counts at SNP 1524 population 3
+WARNING: no counts at SNP 1530 population 2
+WARNING: no counts at SNP 1531 population 3
+WARNING: no counts at SNP 1534 population 3
+WARNING: no counts at SNP 1586 population 3
+WARNING: no counts at SNP 1587 population 3
+WARNING: no counts at SNP 1595 population 3
+WARNING: no counts at SNP 1614 population 3
+WARNING: no counts at SNP 1615 population 3
+WARNING: no counts at SNP 1619 population 6
+WARNING: no counts at SNP 1633 population 2
+WARNING: no counts at SNP 1667 population 3
+WARNING: no counts at SNP 1668 population 3
+WARNING: no counts at SNP 1681 population 3
+WARNING: no counts at SNP 1682 population 3
+WARNING: no counts at SNP 1695 population 3
+WARNING: no counts at SNP 1699 population 2
+WARNING: no counts at SNP 1700 population 2
+WARNING: no counts at SNP 1709 population 3
+WARNING: no counts at SNP 1711 population 6
+WARNING: no counts at SNP 1714 population 3
+WARNING: no counts at SNP 1715 population 2
+WARNING: no counts at SNP 1723 population 3
+WARNING: no counts at SNP 1728 population 2
+WARNING: no counts at SNP 1732 population 3
+WARNING: no counts at SNP 1741 population 3
+WARNING: no counts at SNP 1742 population 3
+WARNING: no counts at SNP 1765 population 3
+WARNING: no counts at SNP 1785 population 3
+WARNING: no counts at SNP 1786 population 3
+WARNING: no counts at SNP 1789 population 3
+WARNING: no counts at SNP 1804 population 3
+WARNING: no counts at SNP 1853 population 3
+WARNING: no counts at SNP 1854 population 3
+WARNING: no counts at SNP 1870 population 0
+WARNING: no counts at SNP 1874 population 3
+WARNING: no counts at SNP 1875 population 3
+WARNING: no counts at SNP 1890 population 5
+Estimating covariance matrix in 1892 blocks of size 1
+SEED: 1658170804
+Starting from:
+(tristrami:0.00969202,(chloris:0.0121754,colonus:0.0156929):0.00969202);
+Adding sordidus [4/8]
+ln(likelihood): 17.410338 
+(tristrami:0.00878206,(colonus:0.017388,(chloris:0.00922583,sordidus:0.016239):0.0061912):0.00878206);
+Adding leucopygius [5/8]
+ln(likelihood): 78.548396 
+(((chloris:0.00963143,sordidus:0.0164119):0.00587107,leucopygius:0.136326):0.00205108,(colonus:0.0168187,tristrami:0.0116492):0.00205108);
+Adding albicilla [6/8]
+ln(likelihood): 115.35832 
+((tristrami:0.00817383,albicilla:0.0145398):0.00331253,(colonus:0.016807,((chloris:0.00916984,sordidus:0.015987):0.00457053,leucopygius:0.13577):0.00320332):0.00331253);
+Adding saurophagus [7/8]
+ln(likelihood): 156.25117 
+((leucopygius:0.135619,(colonus:0.0157079,(tristrami:0.00713933,(albicilla:0.00807838,saurophagus:0.0082603):0.006823):0.00650379):0.00462614):0.00185106,(chloris:0.00954844,sordidus:0.0165413):0.00185106);
+Adding sanctus [8/8]
+ln(likelihood): 207.86696 
+(((colonus:0.0155513,(tristrami:0.00697693,(albicilla:0.00797678,saurophagus:0.0080266):0.00680465):0.00647395):0.00475661,(leucopygius:0.129246,sanctus:0.00600324):0.00742311):0.00182552,(chloris:0.00910132,sordidus:0.0158741):0.00182552);
+Set root above leucopygius
+DONE.
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:8 nsnp:1892
+WARNING: no counts at SNP 1 population 0
+WARNING: no counts at SNP 34 population 2
+WARNING: no counts at SNP 50 population 3
+WARNING: no counts at SNP 51 population 3
+WARNING: no counts at SNP 70 population 3
+WARNING: no counts at SNP 73 population 0
+WARNING: no counts at SNP 94 population 3
+WARNING: no counts at SNP 95 population 3
+WARNING: no counts at SNP 127 population 3
+WARNING: no counts at SNP 128 population 3
+WARNING: no counts at SNP 131 population 3
+WARNING: no counts at SNP 132 population 3
+WARNING: no counts at SNP 147 population 2
+WARNING: no counts at SNP 152 population 3
+WARNING: no counts at SNP 153 population 3
+WARNING: no counts at SNP 160 population 3
+WARNING: no counts at SNP 167 population 2
+WARNING: no counts at SNP 169 population 3
+WARNING: no counts at SNP 170 population 3
+WARNING: no counts at SNP 211 population 3
+WARNING: no counts at SNP 271 population 3
+WARNING: no counts at SNP 284 population 2
+WARNING: no counts at SNP 301 population 3
+WARNING: no counts at SNP 302 population 3
+WARNING: no counts at SNP 324 population 3
+WARNING: no counts at SNP 341 population 3
+WARNING: no counts at SNP 348 population 3
+WARNING: no counts at SNP 374 population 3
+WARNING: no counts at SNP 375 population 3
+WARNING: no counts at SNP 382 population 3
+WARNING: no counts at SNP 387 population 3
+WARNING: no counts at SNP 390 population 2
+WARNING: no counts at SNP 391 population 2
+WARNING: no counts at SNP 404 population 3
+WARNING: no counts at SNP 408 population 3
+WARNING: no counts at SNP 409 population 3
+WARNING: no counts at SNP 440 population 3
+WARNING: no counts at SNP 471 population 2
+WARNING: no counts at SNP 480 population 2
+WARNING: no counts at SNP 481 population 2
+WARNING: no counts at SNP 493 population 3
+WARNING: no counts at SNP 509 population 3
+WARNING: no counts at SNP 520 population 3
+WARNING: no counts at SNP 521 population 3
+WARNING: no counts at SNP 522 population 3
+WARNING: no counts at SNP 523 population 3
+WARNING: no counts at SNP 551 population 2
+WARNING: no counts at SNP 554 population 3
+WARNING: no counts at SNP 557 population 3
+WARNING: no counts at SNP 558 population 3
+WARNING: no counts at SNP 567 population 3
+WARNING: no counts at SNP 569 population 3
+WARNING: no counts at SNP 590 population 3
+WARNING: no counts at SNP 591 population 3
+WARNING: no counts at SNP 594 population 2
+WARNING: no counts at SNP 619 population 3
+WARNING: no counts at SNP 620 population 3
+WARNING: no counts at SNP 639 population 3
+WARNING: no counts at SNP 640 population 3
+WARNING: no counts at SNP 652 population 3
+WARNING: no counts at SNP 653 population 3
+WARNING: no counts at SNP 666 population 5
+WARNING: no counts at SNP 673 population 3
+WARNING: no counts at SNP 676 population 3
+WARNING: no counts at SNP 700 population 3
+WARNING: no counts at SNP 701 population 3
+WARNING: no counts at SNP 729 population 3
+WARNING: no counts at SNP 730 population 3
+WARNING: no counts at SNP 746 population 2
+WARNING: no counts at SNP 749 population 3
+WARNING: no counts at SNP 750 population 3
+WARNING: no counts at SNP 766 population 3
+WARNING: no counts at SNP 767 population 3
+WARNING: no counts at SNP 768 population 3
+WARNING: no counts at SNP 782 population 3
+WARNING: no counts at SNP 787 population 3
+WARNING: no counts at SNP 788 population 3
+WARNING: no counts at SNP 800 population 3
+WARNING: no counts at SNP 803 population 3
+WARNING: no counts at SNP 804 population 3
+WARNING: no counts at SNP 808 population 2
+WARNING: no counts at SNP 813 population 3
+WARNING: no counts at SNP 814 population 3
+WARNING: no counts at SNP 818 population 3
+WARNING: no counts at SNP 845 population 2
+WARNING: no counts at SNP 846 population 2
+WARNING: no counts at SNP 877 population 3
+WARNING: no counts at SNP 878 population 3
+WARNING: no counts at SNP 883 population 3
+WARNING: no counts at SNP 900 population 3
+WARNING: no counts at SNP 901 population 3
+WARNING: no counts at SNP 907 population 3
+WARNING: no counts at SNP 925 population 3
+WARNING: no counts at SNP 926 population 3
+WARNING: no counts at SNP 955 population 3
+WARNING: no counts at SNP 956 population 3
+WARNING: no counts at SNP 962 population 3
+WARNING: no counts at SNP 963 population 3
+WARNING: no counts at SNP 970 population 3
+WARNING: no counts at SNP 998 population 3
+WARNING: no counts at SNP 1001 population 3
+WARNING: no counts at SNP 1002 population 3
+WARNING: no counts at SNP 1017 population 3
+WARNING: no counts at SNP 1018 population 3
+WARNING: no counts at SNP 1032 population 3
+WARNING: no counts at SNP 1033 population 3
+WARNING: no counts at SNP 1034 population 3
+WARNING: no counts at SNP 1044 population 0
+WARNING: no counts at SNP 1045 population 0
+WARNING: no counts at SNP 1070 population 3
+WARNING: no counts at SNP 1071 population 3
+WARNING: no counts at SNP 1079 population 2
+WARNING: no counts at SNP 1095 population 3
+WARNING: no counts at SNP 1096 population 3
+WARNING: no counts at SNP 1097 population 3
+WARNING: no counts at SNP 1140 population 2
+WARNING: no counts at SNP 1158 population 2
+WARNING: no counts at SNP 1170 population 3
+WARNING: no counts at SNP 1171 population 3
+WARNING: no counts at SNP 1176 population 3
+WARNING: no counts at SNP 1182 population 3
+WARNING: no counts at SNP 1183 population 3
+WARNING: no counts at SNP 1222 population 3
+WARNING: no counts at SNP 1223 population 3
+WARNING: no counts at SNP 1226 population 3
+WARNING: no counts at SNP 1232 population 3
+WARNING: no counts at SNP 1233 population 3
+WARNING: no counts at SNP 1235 population 3
+WARNING: no counts at SNP 1236 population 3
+WARNING: no counts at SNP 1251 population 2
+WARNING: no counts at SNP 1255 population 3
+WARNING: no counts at SNP 1256 population 3
+WARNING: no counts at SNP 1257 population 3
+WARNING: no counts at SNP 1258 population 3
+WARNING: no counts at SNP 1294 population 3
+WARNING: no counts at SNP 1302 population 3
+WARNING: no counts at SNP 1303 population 3
+WARNING: no counts at SNP 1323 population 3
+WARNING: no counts at SNP 1332 population 3
+WARNING: no counts at SNP 1333 population 3
+WARNING: no counts at SNP 1337 population 2
+WARNING: no counts at SNP 1344 population 3
+WARNING: no counts at SNP 1373 population 3
+WARNING: no counts at SNP 1384 population 3
+WARNING: no counts at SNP 1428 population 3
+WARNING: no counts at SNP 1439 population 3
+WARNING: no counts at SNP 1440 population 3
+WARNING: no counts at SNP 1510 population 3
+WARNING: no counts at SNP 1511 population 3
+WARNING: no counts at SNP 1523 population 3
+WARNING: no counts at SNP 1524 population 3
+WARNING: no counts at SNP 1530 population 2
+WARNING: no counts at SNP 1531 population 3
+WARNING: no counts at SNP 1534 population 3
+WARNING: no counts at SNP 1586 population 3
+WARNING: no counts at SNP 1587 population 3
+WARNING: no counts at SNP 1595 population 3
+WARNING: no counts at SNP 1614 population 3
+WARNING: no counts at SNP 1615 population 3
+WARNING: no counts at SNP 1619 population 6
+WARNING: no counts at SNP 1633 population 2
+WARNING: no counts at SNP 1667 population 3
+WARNING: no counts at SNP 1668 population 3
+WARNING: no counts at SNP 1681 population 3
+WARNING: no counts at SNP 1682 population 3
+WARNING: no counts at SNP 1695 population 3
+WARNING: no counts at SNP 1699 population 2
+WARNING: no counts at SNP 1700 population 2
+WARNING: no counts at SNP 1709 population 3
+WARNING: no counts at SNP 1711 population 6
+WARNING: no counts at SNP 1714 population 3
+WARNING: no counts at SNP 1715 population 2
+WARNING: no counts at SNP 1723 population 3
+WARNING: no counts at SNP 1728 population 2
+WARNING: no counts at SNP 1732 population 3
+WARNING: no counts at SNP 1741 population 3
+WARNING: no counts at SNP 1742 population 3
+WARNING: no counts at SNP 1765 population 3
+WARNING: no counts at SNP 1785 population 3
+WARNING: no counts at SNP 1786 population 3
+WARNING: no counts at SNP 1789 population 3
+WARNING: no counts at SNP 1804 population 3
+WARNING: no counts at SNP 1853 population 3
+WARNING: no counts at SNP 1854 population 3
+WARNING: no counts at SNP 1870 population 0
+WARNING: no counts at SNP 1874 population 3
+WARNING: no counts at SNP 1875 population 3
+WARNING: no counts at SNP 1890 population 5
+Estimating covariance matrix in 1892 blocks of size 1
+SEED: 1658170804
+Starting from:
+(tristrami:0.00969202,(chloris:0.0121754,colonus:0.0156929):0.00969202);
+Set tree to: (leucopygius:0.0646231,(sanctus:0.00600324,((colonus:0.0155513,(tristrami:0.00697693,(albicilla:0.00797678,saurophagus:0.0080266):0.00680465):0.00647395):0.00475661,(chloris:0.00910132,sordidus:0.0158741):0.00365105):0.00742311):0.0646231);
+ln(lk) = 207.86696 
+Targeting migration to vicinity of:
+colonus leucopygius
+sordidus sanctus
+chloris albicilla
+sordidus albicilla
+
+chloris albicilla
+sordidus albicilla
+colonus leucopygius
+chloris albicilla
+sordidus albicilla
+sordidus sanctus
+Trying chloris albicilla
+chloris:0.00910132 (tristrami:0.00697693,(albicilla:0.00797678,saurophagus:0.0080266):0.00680465):0.00647395
+1->2 0.17415923 208.73001 207.86696
+2->1 0.21563753 208.90795 208.73001
+p1->2 0.66465461 208.4091 208.90795
+p2->1 0.56512684 208.87138 208.90795
+chloris:0.0624369 (albicilla:0.00797678,saurophagus:0.0080266):0.00680465
+1->2 0.035908345 208.01734 208.90795
+2->1 0.12257837 208.85738 208.90795
+p1->2 6.2255936e-07 207.86696 208.90795
+chloris:0.00910132 albicilla:0.00797678
+1->2 0.045962334 208.15155 208.90795
+2->1 0.076793902 208.78975 208.90795
+p1->2 0.044343784 207.98358 208.90795
+(sordidus:0.0158265,chloris:0.00905369):0.00376956 albicilla:0.00953265
+2->1 0.063965157 208.54028 208.90795
+p1->2 0.012027409 207.87227 208.90795
+p2->1 0.18068391 208.41617 208.90795
+Trying colonus leucopygius
+colonus:0.0148072 leucopygius:0.0646231
+1->2 0.11820568 209.04326 208.90795
+2->1 0.078554288 209.2093 209.04326
+p1->2 0.25018033 208.0753 209.2093
+Trying sordidus albicilla
+sordidus:0.0158741 albicilla:0.00797678
+1->2 0.031072317 208.06735 209.2093
+2->1 3.9084634e-07 207.86696 209.2093
+p2->1 3.3026194e-07 207.86696 209.2093
+(chloris:0.00910132,sordidus:0.0158741):0.00365105 albicilla:0.00797678
+Trying sordidus sanctus
+sordidus:0.0158741 sanctus:0.00600324
+1->2 0.0793982 208.77384 209.2093
+2->1 0.12647764 208.98966 209.2093
+p1->2 0.93229985 208.0753 209.2093
+p2->1 0.19249953 208.87449 209.2093
+Migration added
+Local updates around node 1: 0 ln(lk):209.2093 
+Local updates around node 2: 0 ln(lk):209.2093 
+Updates in migration position: 0 ln(lk):209.2093 
+Switches in migration direction: 0 ln(lk):209.2093 
+ln(likelihood):209.2093 
+DONE.
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:8 nsnp:1892
+WARNING: no counts at SNP 1 population 0
+WARNING: no counts at SNP 34 population 2
+WARNING: no counts at SNP 50 population 3
+WARNING: no counts at SNP 51 population 3
+WARNING: no counts at SNP 70 population 3
+WARNING: no counts at SNP 73 population 0
+WARNING: no counts at SNP 94 population 3
+WARNING: no counts at SNP 95 population 3
+WARNING: no counts at SNP 127 population 3
+WARNING: no counts at SNP 128 population 3
+WARNING: no counts at SNP 131 population 3
+WARNING: no counts at SNP 132 population 3
+WARNING: no counts at SNP 147 population 2
+WARNING: no counts at SNP 152 population 3
+WARNING: no counts at SNP 153 population 3
+WARNING: no counts at SNP 160 population 3
+WARNING: no counts at SNP 167 population 2
+WARNING: no counts at SNP 169 population 3
+WARNING: no counts at SNP 170 population 3
+WARNING: no counts at SNP 211 population 3
+WARNING: no counts at SNP 271 population 3
+WARNING: no counts at SNP 284 population 2
+WARNING: no counts at SNP 301 population 3
+WARNING: no counts at SNP 302 population 3
+WARNING: no counts at SNP 324 population 3
+WARNING: no counts at SNP 341 population 3
+WARNING: no counts at SNP 348 population 3
+WARNING: no counts at SNP 374 population 3
+WARNING: no counts at SNP 375 population 3
+WARNING: no counts at SNP 382 population 3
+WARNING: no counts at SNP 387 population 3
+WARNING: no counts at SNP 390 population 2
+WARNING: no counts at SNP 391 population 2
+WARNING: no counts at SNP 404 population 3
+WARNING: no counts at SNP 408 population 3
+WARNING: no counts at SNP 409 population 3
+WARNING: no counts at SNP 440 population 3
+WARNING: no counts at SNP 471 population 2
+WARNING: no counts at SNP 480 population 2
+WARNING: no counts at SNP 481 population 2
+WARNING: no counts at SNP 493 population 3
+WARNING: no counts at SNP 509 population 3
+WARNING: no counts at SNP 520 population 3
+WARNING: no counts at SNP 521 population 3
+WARNING: no counts at SNP 522 population 3
+WARNING: no counts at SNP 523 population 3
+WARNING: no counts at SNP 551 population 2
+WARNING: no counts at SNP 554 population 3
+WARNING: no counts at SNP 557 population 3
+WARNING: no counts at SNP 558 population 3
+WARNING: no counts at SNP 567 population 3
+WARNING: no counts at SNP 569 population 3
+WARNING: no counts at SNP 590 population 3
+WARNING: no counts at SNP 591 population 3
+WARNING: no counts at SNP 594 population 2
+WARNING: no counts at SNP 619 population 3
+WARNING: no counts at SNP 620 population 3
+WARNING: no counts at SNP 639 population 3
+WARNING: no counts at SNP 640 population 3
+WARNING: no counts at SNP 652 population 3
+WARNING: no counts at SNP 653 population 3
+WARNING: no counts at SNP 666 population 5
+WARNING: no counts at SNP 673 population 3
+WARNING: no counts at SNP 676 population 3
+WARNING: no counts at SNP 700 population 3
+WARNING: no counts at SNP 701 population 3
+WARNING: no counts at SNP 729 population 3
+WARNING: no counts at SNP 730 population 3
+WARNING: no counts at SNP 746 population 2
+WARNING: no counts at SNP 749 population 3
+WARNING: no counts at SNP 750 population 3
+WARNING: no counts at SNP 766 population 3
+WARNING: no counts at SNP 767 population 3
+WARNING: no counts at SNP 768 population 3
+WARNING: no counts at SNP 782 population 3
+WARNING: no counts at SNP 787 population 3
+WARNING: no counts at SNP 788 population 3
+WARNING: no counts at SNP 800 population 3
+WARNING: no counts at SNP 803 population 3
+WARNING: no counts at SNP 804 population 3
+WARNING: no counts at SNP 808 population 2
+WARNING: no counts at SNP 813 population 3
+WARNING: no counts at SNP 814 population 3
+WARNING: no counts at SNP 818 population 3
+WARNING: no counts at SNP 845 population 2
+WARNING: no counts at SNP 846 population 2
+WARNING: no counts at SNP 877 population 3
+WARNING: no counts at SNP 878 population 3
+WARNING: no counts at SNP 883 population 3
+WARNING: no counts at SNP 900 population 3
+WARNING: no counts at SNP 901 population 3
+WARNING: no counts at SNP 907 population 3
+WARNING: no counts at SNP 925 population 3
+WARNING: no counts at SNP 926 population 3
+WARNING: no counts at SNP 955 population 3
+WARNING: no counts at SNP 956 population 3
+WARNING: no counts at SNP 962 population 3
+WARNING: no counts at SNP 963 population 3
+WARNING: no counts at SNP 970 population 3
+WARNING: no counts at SNP 998 population 3
+WARNING: no counts at SNP 1001 population 3
+WARNING: no counts at SNP 1002 population 3
+WARNING: no counts at SNP 1017 population 3
+WARNING: no counts at SNP 1018 population 3
+WARNING: no counts at SNP 1032 population 3
+WARNING: no counts at SNP 1033 population 3
+WARNING: no counts at SNP 1034 population 3
+WARNING: no counts at SNP 1044 population 0
+WARNING: no counts at SNP 1045 population 0
+WARNING: no counts at SNP 1070 population 3
+WARNING: no counts at SNP 1071 population 3
+WARNING: no counts at SNP 1079 population 2
+WARNING: no counts at SNP 1095 population 3
+WARNING: no counts at SNP 1096 population 3
+WARNING: no counts at SNP 1097 population 3
+WARNING: no counts at SNP 1140 population 2
+WARNING: no counts at SNP 1158 population 2
+WARNING: no counts at SNP 1170 population 3
+WARNING: no counts at SNP 1171 population 3
+WARNING: no counts at SNP 1176 population 3
+WARNING: no counts at SNP 1182 population 3
+WARNING: no counts at SNP 1183 population 3
+WARNING: no counts at SNP 1222 population 3
+WARNING: no counts at SNP 1223 population 3
+WARNING: no counts at SNP 1226 population 3
+WARNING: no counts at SNP 1232 population 3
+WARNING: no counts at SNP 1233 population 3
+WARNING: no counts at SNP 1235 population 3
+WARNING: no counts at SNP 1236 population 3
+WARNING: no counts at SNP 1251 population 2
+WARNING: no counts at SNP 1255 population 3
+WARNING: no counts at SNP 1256 population 3
+WARNING: no counts at SNP 1257 population 3
+WARNING: no counts at SNP 1258 population 3
+WARNING: no counts at SNP 1294 population 3
+WARNING: no counts at SNP 1302 population 3
+WARNING: no counts at SNP 1303 population 3
+WARNING: no counts at SNP 1323 population 3
+WARNING: no counts at SNP 1332 population 3
+WARNING: no counts at SNP 1333 population 3
+WARNING: no counts at SNP 1337 population 2
+WARNING: no counts at SNP 1344 population 3
+WARNING: no counts at SNP 1373 population 3
+WARNING: no counts at SNP 1384 population 3
+WARNING: no counts at SNP 1428 population 3
+WARNING: no counts at SNP 1439 population 3
+WARNING: no counts at SNP 1440 population 3
+WARNING: no counts at SNP 1510 population 3
+WARNING: no counts at SNP 1511 population 3
+WARNING: no counts at SNP 1523 population 3
+WARNING: no counts at SNP 1524 population 3
+WARNING: no counts at SNP 1530 population 2
+WARNING: no counts at SNP 1531 population 3
+WARNING: no counts at SNP 1534 population 3
+WARNING: no counts at SNP 1586 population 3
+WARNING: no counts at SNP 1587 population 3
+WARNING: no counts at SNP 1595 population 3
+WARNING: no counts at SNP 1614 population 3
+WARNING: no counts at SNP 1615 population 3
+WARNING: no counts at SNP 1619 population 6
+WARNING: no counts at SNP 1633 population 2
+WARNING: no counts at SNP 1667 population 3
+WARNING: no counts at SNP 1668 population 3
+WARNING: no counts at SNP 1681 population 3
+WARNING: no counts at SNP 1682 population 3
+WARNING: no counts at SNP 1695 population 3
+WARNING: no counts at SNP 1699 population 2
+WARNING: no counts at SNP 1700 population 2
+WARNING: no counts at SNP 1709 population 3
+WARNING: no counts at SNP 1711 population 6
+WARNING: no counts at SNP 1714 population 3
+WARNING: no counts at SNP 1715 population 2
+WARNING: no counts at SNP 1723 population 3
+WARNING: no counts at SNP 1728 population 2
+WARNING: no counts at SNP 1732 population 3
+WARNING: no counts at SNP 1741 population 3
+WARNING: no counts at SNP 1742 population 3
+WARNING: no counts at SNP 1765 population 3
+WARNING: no counts at SNP 1785 population 3
+WARNING: no counts at SNP 1786 population 3
+WARNING: no counts at SNP 1789 population 3
+WARNING: no counts at SNP 1804 population 3
+WARNING: no counts at SNP 1853 population 3
+WARNING: no counts at SNP 1854 population 3
+WARNING: no counts at SNP 1870 population 0
+WARNING: no counts at SNP 1874 population 3
+WARNING: no counts at SNP 1875 population 3
+WARNING: no counts at SNP 1890 population 5
+Estimating covariance matrix in 1892 blocks of size 1
+SEED: 1658170805
+Starting from:
+((sanctus:0.00839667,sordidus:0.0153983):0.0146871,albicilla:0.0146871);
+Set tree to: ((sanctus:0.00566183,(((tristrami:0.00697693,(saurophagus:0.0080266,albicilla:0.00797678):0.00680465):0.00517839,colonus:0.0195511):0.00605223,(sordidus:0.0158741,chloris:0.00910132):0.00324098):0.0078328):0.013048,leucopygius:0.11654);
+ln(lk) = 209.2093 
+Targeting migration to vicinity of:
+tristrami leucopygius
+sordidus sanctus
+albicilla chloris
+colonus chloris
+
+albicilla chloris
+albicilla sordidus
+colonus chloris
+sordidus leucopygius
+sordidus sanctus
+tristrami leucopygius
+saurophagus sanctus
+Trying albicilla chloris
+((tristrami:0.00697693,(saurophagus:0.0080266,albicilla:0.00797678):0.00680465):0.00517839,colonus:0.0195511):0.00605223 chloris:0.00910132
+1->2 0.091048792 209.80488 209.2093
+2->1 0.091048792 210.01262 209.80488
+p1->2 4.0751289e-05 209.2093 210.01262
+(tristrami:0.00697693,(saurophagus:0.0080266,albicilla:0.00797678):0.00680465):0.00517839 chloris:0.0091022
+1->2 0.23265032 210.21423 210.01262
+2->1 0.053518157 209.39838 210.21423
+p2->1 0.39919356 209.2096 210.21423
+(saurophagus:0.0080266,albicilla:0.00797678):0.00680465 chloris:0.00910132
+1->2 0.10772139 209.86709 210.21423
+2->1 0.015591268 209.23627 210.21423
+p2->1 3.8719494e-07 209.2093 210.21423
+((colonus:0.0195511,(tristrami:0.00697693,(saurophagus:0.0080266,albicilla:0.00797678):0.00680466):0.00517839):0.00605223,(sordidus:0.0158741,chloris:0.00910132):0.00324098):0.0078328 chloris:0.00910132
+p1->2 3.8719494e-07 209.2093 210.21423
+albicilla:0.00797678 chloris:0.00910133
+1->2 0.060094334 209.77891 210.21423
+2->1 0.0373105 209.39236 210.21423
+p2->1 0.034871511 209.28011 210.21423
+albicilla:0.00917033 (sordidus:0.0158484,chloris:0.00907562):0.00331684
+1->2 0.030406212 209.33284 210.21423
+p1->2 0.0023359479 209.20958 210.21423
+p2->1 0.011326538 209.21411 210.21423
+Trying albicilla sordidus
+albicilla:0.0083369 sordidus:0.0158741
+1->2 3.3026194e-07 209.2093 210.21423
+2->1 0.023619452 209.32361 210.21423
+p1->2 3.3026194e-07 209.2093 210.21423
+albicilla:0.00797678 (chloris:0.00910132,sordidus:0.0158741):0.00324099
+Trying colonus chloris
+(colonus:0.0195511,(tristrami:0.00697693,(saurophagus:0.0080266,albicilla:0.00797678):0.00680465):0.00517839):0.00605223 chloris:0.00910132
+colonus:0.0195511 chloris:0.00910132
+1->2 0.21585828 210.30146 210.21423
+2->1 0.056945603 209.35516 210.30146
+p2->1 8.7049499e-05 209.2093 210.30146
+(((tristrami:0.00697693,(saurophagus:0.0080266,albicilla:0.00797678):0.00680465):0.00517762,colonus:0.0195556):0.006053,(sordidus:0.0158741,chloris:0.00910132):0.00324103):0.00783277 chloris:0.00910132
+Trying saurophagus sanctus
+saurophagus:0.0080266 sanctus:0.00566179
+1->2 0.0010909446 209.20955 210.30146
+2->1 0.011054639 209.2288 210.30146
+p1->2 3.0968394e-07 209.2093 210.30146
+p2->1 0.0049768784 209.21781 210.30146
+Trying sordidus leucopygius
+sordidus:0.0158741 leucopygius:0.10303
+1->2 0.019265786 209.23901 210.30146
+2->1 0.037102696 209.4712 210.30146
+p1->2 3.0968394e-07 209.2093 210.30146
+Trying sordidus sanctus
+sordidus:0.0158741 sanctus:0.00566183
+1->2 0.066250235 209.86083 210.30146
+2->1 0.14892361 210.24942 210.30146
+p1->2 0.093406156 209.24456 210.30146
+p2->1 0.18564485 210.21346 210.30146
+Trying tristrami leucopygius
+tristrami:0.00697693 leucopygius:0.116523
+1->2 0.043222286 209.35816 210.30146
+2->1 0.030066023 209.59479 210.30146
+p1->2 0.02840524 209.24451 210.30146
+Migration added
+Local updates around node 1: 0 ln(lk):210.30146 
+Local updates around node 2: 0 ln(lk):210.30146 
+Updates in migration position: 0 ln(lk):210.30146 
+Switches in migration direction: 0 ln(lk):210.30146 
+ln(likelihood):210.33544 
+DONE.
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:8 nsnp:1892
+WARNING: no counts at SNP 1 population 0
+WARNING: no counts at SNP 34 population 2
+WARNING: no counts at SNP 50 population 3
+WARNING: no counts at SNP 51 population 3
+WARNING: no counts at SNP 70 population 3
+WARNING: no counts at SNP 73 population 0
+WARNING: no counts at SNP 94 population 3
+WARNING: no counts at SNP 95 population 3
+WARNING: no counts at SNP 127 population 3
+WARNING: no counts at SNP 128 population 3
+WARNING: no counts at SNP 131 population 3
+WARNING: no counts at SNP 132 population 3
+WARNING: no counts at SNP 147 population 2
+WARNING: no counts at SNP 152 population 3
+WARNING: no counts at SNP 153 population 3
+WARNING: no counts at SNP 160 population 3
+WARNING: no counts at SNP 167 population 2
+WARNING: no counts at SNP 169 population 3
+WARNING: no counts at SNP 170 population 3
+WARNING: no counts at SNP 211 population 3
+WARNING: no counts at SNP 271 population 3
+WARNING: no counts at SNP 284 population 2
+WARNING: no counts at SNP 301 population 3
+WARNING: no counts at SNP 302 population 3
+WARNING: no counts at SNP 324 population 3
+WARNING: no counts at SNP 341 population 3
+WARNING: no counts at SNP 348 population 3
+WARNING: no counts at SNP 374 population 3
+WARNING: no counts at SNP 375 population 3
+WARNING: no counts at SNP 382 population 3
+WARNING: no counts at SNP 387 population 3
+WARNING: no counts at SNP 390 population 2
+WARNING: no counts at SNP 391 population 2
+WARNING: no counts at SNP 404 population 3
+WARNING: no counts at SNP 408 population 3
+WARNING: no counts at SNP 409 population 3
+WARNING: no counts at SNP 440 population 3
+WARNING: no counts at SNP 471 population 2
+WARNING: no counts at SNP 480 population 2
+WARNING: no counts at SNP 481 population 2
+WARNING: no counts at SNP 493 population 3
+WARNING: no counts at SNP 509 population 3
+WARNING: no counts at SNP 520 population 3
+WARNING: no counts at SNP 521 population 3
+WARNING: no counts at SNP 522 population 3
+WARNING: no counts at SNP 523 population 3
+WARNING: no counts at SNP 551 population 2
+WARNING: no counts at SNP 554 population 3
+WARNING: no counts at SNP 557 population 3
+WARNING: no counts at SNP 558 population 3
+WARNING: no counts at SNP 567 population 3
+WARNING: no counts at SNP 569 population 3
+WARNING: no counts at SNP 590 population 3
+WARNING: no counts at SNP 591 population 3
+WARNING: no counts at SNP 594 population 2
+WARNING: no counts at SNP 619 population 3
+WARNING: no counts at SNP 620 population 3
+WARNING: no counts at SNP 639 population 3
+WARNING: no counts at SNP 640 population 3
+WARNING: no counts at SNP 652 population 3
+WARNING: no counts at SNP 653 population 3
+WARNING: no counts at SNP 666 population 5
+WARNING: no counts at SNP 673 population 3
+WARNING: no counts at SNP 676 population 3
+WARNING: no counts at SNP 700 population 3
+WARNING: no counts at SNP 701 population 3
+WARNING: no counts at SNP 729 population 3
+WARNING: no counts at SNP 730 population 3
+WARNING: no counts at SNP 746 population 2
+WARNING: no counts at SNP 749 population 3
+WARNING: no counts at SNP 750 population 3
+WARNING: no counts at SNP 766 population 3
+WARNING: no counts at SNP 767 population 3
+WARNING: no counts at SNP 768 population 3
+WARNING: no counts at SNP 782 population 3
+WARNING: no counts at SNP 787 population 3
+WARNING: no counts at SNP 788 population 3
+WARNING: no counts at SNP 800 population 3
+WARNING: no counts at SNP 803 population 3
+WARNING: no counts at SNP 804 population 3
+WARNING: no counts at SNP 808 population 2
+WARNING: no counts at SNP 813 population 3
+WARNING: no counts at SNP 814 population 3
+WARNING: no counts at SNP 818 population 3
+WARNING: no counts at SNP 845 population 2
+WARNING: no counts at SNP 846 population 2
+WARNING: no counts at SNP 877 population 3
+WARNING: no counts at SNP 878 population 3
+WARNING: no counts at SNP 883 population 3
+WARNING: no counts at SNP 900 population 3
+WARNING: no counts at SNP 901 population 3
+WARNING: no counts at SNP 907 population 3
+WARNING: no counts at SNP 925 population 3
+WARNING: no counts at SNP 926 population 3
+WARNING: no counts at SNP 955 population 3
+WARNING: no counts at SNP 956 population 3
+WARNING: no counts at SNP 962 population 3
+WARNING: no counts at SNP 963 population 3
+WARNING: no counts at SNP 970 population 3
+WARNING: no counts at SNP 998 population 3
+WARNING: no counts at SNP 1001 population 3
+WARNING: no counts at SNP 1002 population 3
+WARNING: no counts at SNP 1017 population 3
+WARNING: no counts at SNP 1018 population 3
+WARNING: no counts at SNP 1032 population 3
+WARNING: no counts at SNP 1033 population 3
+WARNING: no counts at SNP 1034 population 3
+WARNING: no counts at SNP 1044 population 0
+WARNING: no counts at SNP 1045 population 0
+WARNING: no counts at SNP 1070 population 3
+WARNING: no counts at SNP 1071 population 3
+WARNING: no counts at SNP 1079 population 2
+WARNING: no counts at SNP 1095 population 3
+WARNING: no counts at SNP 1096 population 3
+WARNING: no counts at SNP 1097 population 3
+WARNING: no counts at SNP 1140 population 2
+WARNING: no counts at SNP 1158 population 2
+WARNING: no counts at SNP 1170 population 3
+WARNING: no counts at SNP 1171 population 3
+WARNING: no counts at SNP 1176 population 3
+WARNING: no counts at SNP 1182 population 3
+WARNING: no counts at SNP 1183 population 3
+WARNING: no counts at SNP 1222 population 3
+WARNING: no counts at SNP 1223 population 3
+WARNING: no counts at SNP 1226 population 3
+WARNING: no counts at SNP 1232 population 3
+WARNING: no counts at SNP 1233 population 3
+WARNING: no counts at SNP 1235 population 3
+WARNING: no counts at SNP 1236 population 3
+WARNING: no counts at SNP 1251 population 2
+WARNING: no counts at SNP 1255 population 3
+WARNING: no counts at SNP 1256 population 3
+WARNING: no counts at SNP 1257 population 3
+WARNING: no counts at SNP 1258 population 3
+WARNING: no counts at SNP 1294 population 3
+WARNING: no counts at SNP 1302 population 3
+WARNING: no counts at SNP 1303 population 3
+WARNING: no counts at SNP 1323 population 3
+WARNING: no counts at SNP 1332 population 3
+WARNING: no counts at SNP 1333 population 3
+WARNING: no counts at SNP 1337 population 2
+WARNING: no counts at SNP 1344 population 3
+WARNING: no counts at SNP 1373 population 3
+WARNING: no counts at SNP 1384 population 3
+WARNING: no counts at SNP 1428 population 3
+WARNING: no counts at SNP 1439 population 3
+WARNING: no counts at SNP 1440 population 3
+WARNING: no counts at SNP 1510 population 3
+WARNING: no counts at SNP 1511 population 3
+WARNING: no counts at SNP 1523 population 3
+WARNING: no counts at SNP 1524 population 3
+WARNING: no counts at SNP 1530 population 2
+WARNING: no counts at SNP 1531 population 3
+WARNING: no counts at SNP 1534 population 3
+WARNING: no counts at SNP 1586 population 3
+WARNING: no counts at SNP 1587 population 3
+WARNING: no counts at SNP 1595 population 3
+WARNING: no counts at SNP 1614 population 3
+WARNING: no counts at SNP 1615 population 3
+WARNING: no counts at SNP 1619 population 6
+WARNING: no counts at SNP 1633 population 2
+WARNING: no counts at SNP 1667 population 3
+WARNING: no counts at SNP 1668 population 3
+WARNING: no counts at SNP 1681 population 3
+WARNING: no counts at SNP 1682 population 3
+WARNING: no counts at SNP 1695 population 3
+WARNING: no counts at SNP 1699 population 2
+WARNING: no counts at SNP 1700 population 2
+WARNING: no counts at SNP 1709 population 3
+WARNING: no counts at SNP 1711 population 6
+WARNING: no counts at SNP 1714 population 3
+WARNING: no counts at SNP 1715 population 2
+WARNING: no counts at SNP 1723 population 3
+WARNING: no counts at SNP 1728 population 2
+WARNING: no counts at SNP 1732 population 3
+WARNING: no counts at SNP 1741 population 3
+WARNING: no counts at SNP 1742 population 3
+WARNING: no counts at SNP 1765 population 3
+WARNING: no counts at SNP 1785 population 3
+WARNING: no counts at SNP 1786 population 3
+WARNING: no counts at SNP 1789 population 3
+WARNING: no counts at SNP 1804 population 3
+WARNING: no counts at SNP 1853 population 3
+WARNING: no counts at SNP 1854 population 3
+WARNING: no counts at SNP 1870 population 0
+WARNING: no counts at SNP 1874 population 3
+WARNING: no counts at SNP 1875 population 3
+WARNING: no counts at SNP 1890 population 5
+Estimating covariance matrix in 1892 blocks of size 1
+SEED: 1658170808
+Starting from:
+(sanctus:0.0139806,(saurophagus:0.0120825,tristrami:0.00634304):0.0139806);
+Set tree to: (leucopygius:0.121745,(sanctus:0.00566272,(((tristrami:0.00697693,(saurophagus:0.0080266,albicilla:0.00797678):0.00680465):0.00434937,colonus:0.0226871):0.00761863,(chloris:0.0160803,sordidus:0.01385):0.00491577):0.00709876):0.00784321);
+ln(lk) = 210.33544 
+Targeting migration to vicinity of:
+tristrami leucopygius
+albicilla sordidus
+chloris albicilla
+sanctus saurophagus
+
+albicilla chloris
+albicilla sordidus
+chloris albicilla
+sordidus albicilla
+leucopygius tristrami
+sanctus saurophagus
+tristrami leucopygius
+saurophagus sanctus
+Trying albicilla chloris
+albicilla:0.00797678 chloris:0.0160803
+1->2 0.011780549 210.36488 210.33544
+2->1 0.027482871 210.47554 210.36488
+p1->2 0.005995323 210.34025 210.47554
+p2->1 0.03229196 210.41059 210.47554
+albicilla:0.00909586 (sordidus:0.0138425,chloris:0.0160859):0.00497364
+1->2 0.038284741 210.4786 210.47554
+p1->2 0.0016593698 210.33554 210.4786
+p2->1 0.0013479175 210.33552 210.4786
+Trying albicilla sordidus
+albicilla:0.00801918 sordidus:0.0138501
+1->2 0.0095536802 210.35149 210.4786
+2->1 0.029523386 210.52044 210.4786
+p1->2 9.8076482e-05 210.33544 210.52044
+albicilla:0.00797678 (chloris:0.0160792,sordidus:0.0138538):0.00491681
+Trying chloris albicilla
+chloris:0.0160792 albicilla:0.00797678
+(chloris:0.0160792,sordidus:0.0138538):0.00491681 albicilla:0.00797678
+Trying leucopygius tristrami
+leucopygius:0.121745 tristrami:0.00697693
+1->2 0.033557817 210.769 210.52044
+2->1 0.049852014 210.53334 210.769
+p2->1 0.035708059 210.39756 210.769
+Trying sanctus saurophagus
+sanctus:0.00511905 saurophagus:0.0080266
+1->2 0.0088965381 210.3479 210.769
+2->1 3.0968394e-07 210.33544 210.769
+p1->2 0.0058506443 210.34232 210.769
+p2->1 3.0968394e-07 210.33544 210.769
+Trying saurophagus sanctus
+saurophagus:0.0080266 sanctus:0.00566273
+Trying sordidus albicilla
+sordidus:0.01385 albicilla:0.00797678
+(chloris:0.0160803,sordidus:0.01385):0.00491577 albicilla:0.00797678
+Trying tristrami leucopygius
+tristrami:0.00697693 leucopygius:0.121745
+Migration added
+Local updates around node 1: 0 ln(lk):210.769 
+Local updates around node 2: 0 ln(lk):210.769 
+Updates in migration position: 0 ln(lk):210.769 
+Switches in migration direction: 0 ln(lk):210.769 
+ln(likelihood):210.7727 
+DONE.
