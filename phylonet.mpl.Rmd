@@ -1,0 +1,81 @@
+---
+title: "phylonet"
+author: "Devon DeRaad"
+date: '2023-03-02'
+output: html_document
+---
+
+### The input for the maximum-pseudo-likelihood approach is basically just a single nexus file containing all of your input gene trees, for example:
+```{bash, eval=FALSE}
+#NEXUS
+
+BEGIN TREES;
+Tree gt1=(a:2.406,((d:1.154,(e:1.117,f:1.117):0.037):1.104,(b:1.612,c:1.612):0.646):0.148);
+Tree gt2=(a:2.155,(f:1.603,(e:1.55,(b:1.228,(c:0.504,d:0.504):0.724):0.322):0.053):0.552);
+Tree gt3=(a:2.831,((e:1.492,f:1.492):0.176,(d:1.53,(b:1.401,c:1.401):0.13):0.138):1.163);
+END;
+
+BEGIN PHYLONET;
+
+InferNetwork_MPL (all) 2;
+
+END;
+```
+
+### So to get this input file, all I need to do is stick all of the input gene trees used for ASTRAL into a single nexus
+```{r}
+#read in gene trees inferred by iqtree2
+library(phytools)
+x<-phytools::read.newick("~/Downloads/ml_best.trees")
+
+#remove branch lengths
+for (i in 1:length(x)){
+  x[[i]]$edge.length<-NULL
+}
+
+#write to file
+write.tree(x, file="~/Downloads/todi.nobrlens.nex")
+```
+
+```{bahs, eval=FALSE}
+#manually edit the nexus in a text editor to get an input that looks like this:
+#NEXUS
+
+BEGIN TREES;
+
+Tree gt1 = ((C,((B,D),A)),E);
+Tree gt2 = (B,(D,(C,(A,E))));
+......
+Tree gt200 = (D,((B,E),(C,A)));
+
+END;
+
+BEGIN PHYLONET;
+
+InferNetwork_MPL (all) 0 -pl 15;
+
+END;
+
+#and save files with varied values after 'InferNetwork_MPL (all)' from 0-3. Run each of these 4 files separately to vary the number of allowed reticulations from 0-4. 
+```
+
+### submit script to run all 4 iterations on the KUHPCC
+```{bash, eval=FALSE}
+#!/bin/sh
+#
+#SBATCH --job-name=phylonet.mpl          # Job Name
+#SBATCH --nodes=1             # nodes
+#SBATCH --cpus-per-task=15               # CPU allocation per Task
+#SBATCH --partition=sixhour           # Name of the Slurm partition used
+#SBATCH --chdir=/home/d669d153/work/todi.subset.2022/phylonet.mpl	# Set working d$
+#SBATCH --mem-per-cpu=2gb            # memory requested
+#SBATCH --time=360
+
+#run phylonet on the cluster using this command
+module load java
+java -jar /home/d669d153/work/PhyloNet_3.8.0.jar mpl.0retic.nobrlens.nex
+java -jar /home/d669d153/work/PhyloNet_3.8.0.jar mpl.1retic.nobrlens.nex
+java -jar /home/d669d153/work/PhyloNet_3.8.0.jar mpl.2retic.nobrlens.nex
+java -jar /home/d669d153/work/PhyloNet_3.8.0.jar mpl.3retic.nobrlens.nex
+```
+
