@@ -1,0 +1,35 @@
+****                   ADMIXTURE Version 1.3.0                  ****
+****                    Copyright 2008-2015                     ****
+****           David Alexander, Suyash Shringarpure,            ****
+****                John  Novembre, Ken Lange                   ****
+****                                                            ****
+****                 Please cite our paper!                     ****
+****   Information at www.genetics.ucla.edu/software/admixture  ****
+
+Cross-validation will be performed.  Folds=5.
+Parallel execution requested.  Will use 5 threads.
+Random seed: 43
+Point estimation method: EM algorithm
+Convergence acceleration algorithm: QuasiNewton, 3 secant conditions
+Point estimation will terminate when objective function delta < 0.0001
+Estimation of standard errors disabled; will compute point estimates only.
+Size of G: 43x756
+Performing five EM steps to prime main algorithm
+1 (EM) 	Elapsed: 0.016	Loglikelihood: -14303.2	(delta): 46917.6
+2 (EM) 	Elapsed: 0.012	Loglikelihood: -14303.2	(delta): 0
+3 (EM) 	Elapsed: 0.02	Loglikelihood: -14303.2	(delta): 0
+4 (EM) 	Elapsed: 0.016	Loglikelihood: -14303.2	(delta): 0
+5 (EM) 	Elapsed: 0.016	Loglikelihood: -14303.2	(delta): 0
+Initial loglikelihood: -14303.2
+Starting main algorithm
+1 (QN/EM) 	Elapsed: 0.037	Loglikelihood: -14303.2	(delta): 0
+Summary: 
+Converged in 1 iterations (0.223 sec)
+Loglikelihood: -14303.218452
+PROBLEM INVERTING MATRIX!
+PROBLEM INVERTING MATRIX!
+PROBLEM INVERTING MATRIX!
+PROBLEM INVERTING MATRIX!
+PROBLEM INVERTING MATRIX!
+CV error (K=1): 0.54486
+Writing output files.

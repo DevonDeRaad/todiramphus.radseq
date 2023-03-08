@@ -1,0 +1,29 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --allow-extra-chr
+  --double-id
+  --make-bed
+  --out binary_fileset
+  --vcf /home/d669d153/work/todi.subset.2022/revision.admixture/san.saur/todi.san.saur.vcf
+
+Hostname: r32r34n02
+Working directory: /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/revision.admixture/san.saur
+Start time: Tue Mar  7 15:00:45 2023
+
+Random number seed: 1678222845
+128845 MB RAM detected; reserving 64422 MB for main workspace.
+--vcf: binary_fileset-temporary.bed + binary_fileset-temporary.bim +
+binary_fileset-temporary.fam written.
+1060 variants loaded from .bim file.
+41 people (0 males, 0 females, 41 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to binary_fileset.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 41 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.924367.
+1060 variants and 41 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to binary_fileset.bed + binary_fileset.bim + binary_fileset.fam ...
+done.
+
+End time: Tue Mar  7 15:00:46 2023
