@@ -51,3 +51,7 @@ This repository will contain a comprehensive compilation of code and expalantory
 ### ABBA/BABA tests for gene flow
 *   We used [Dsuite](https://github.com/millanek/Dsuite) to perform ABBA/BABA tests for excess allele sharing between non-sister taxa across the phylogeny. The code, input files, and output files resulting from running Dsuite are all available here:
     > <https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/dsuite>
+    
+### Species tree reconstruction with TreeMix
+*   All input and output files for running TreeMix are available in the directory 'treemix'. Visualizations and code for running TreeMix can be viewed at:
+    > <https://devonderaad.github.io/todiramphus.radseq/vis.treemix.results.html>
