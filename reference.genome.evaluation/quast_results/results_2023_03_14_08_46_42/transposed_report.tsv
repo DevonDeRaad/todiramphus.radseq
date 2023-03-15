@@ -1,0 +1,2 @@
+Assembly	# contigs (>= 0 bp)	# contigs (>= 1000 bp)	# contigs (>= 5000 bp)	# contigs (>= 10000 bp)	# contigs (>= 25000 bp)	# contigs (>= 50000 bp)	Total length (>= 0 bp)	Total length (>= 1000 bp)	Total length (>= 5000 bp)	Total length (>= 10000 bp)	Total length (>= 25000 bp)	Total length (>= 50000 bp)	# contigs	Largest contig	Total length	GC (%)	N50	N75	L50	L75	# N's per 100 kbp
+Tchloris.1	10081	10081	1318	918	697	571	1145743091	1145743091	1127525158	1124904458	1121371807	1116802477	10081	20899748	1145743091	42.30	4689259	2284924	73	158	1647.29

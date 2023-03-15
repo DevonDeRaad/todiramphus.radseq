@@ -1,0 +1,61 @@
+/home/d669d153/work/quast-5.0.2/quast.py Tchloris.1.fasta -t 10
+
+Version: 5.0.2, 0bb1dd1b
+
+System information:
+  OS: Linux-3.10.0-1160.42.2.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.3
+  CPUs number: 40
+
+Started: 2023-03-14 08:46:46
+
+Logging to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/quast.log
+
+CWD: /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast
+Main parameters: 
+  MODE: default, threads: 10, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  Tchloris.1.fasta ==> Tchloris.1
+
+2023-03-14 08:52:45
+Running Basic statistics processor...
+  Contig files: 
+    Tchloris.1
+  Calculating N50 and L50...
+    Tchloris.1, N50 = 4689259, L50 = 73, Total length = 1145743091, GC % = 42.30, # N's per 100 kbp =  1647.29
+  Drawing Nx plot...
+    saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/basic_stats/GC_content_plot.pdf
+  Drawing Tchloris.1 GC content plot...
+    saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/basic_stats/Tchloris.1_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2023-03-14 08:53:47
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2023-03-14 08:53:59
+RESULTS:
+  Text versions of total report are saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/report.html
+  PDF version (tables and plots) is saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/report.pdf
+  Icarus (contig browser) is saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/icarus.html
+  Log is saved to /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/quast/quast_results/results_2023_03_14_08_46_42/quast.log
+
+Finished: 2023-03-14 08:54:00
+Elapsed time: 0:07:14.667230
+NOTICEs: 1; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

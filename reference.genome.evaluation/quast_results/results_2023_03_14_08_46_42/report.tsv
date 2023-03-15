@@ -1,0 +1,22 @@
+Assembly	Tchloris.1
+# contigs (>= 0 bp)	10081
+# contigs (>= 1000 bp)	10081
+# contigs (>= 5000 bp)	1318
+# contigs (>= 10000 bp)	918
+# contigs (>= 25000 bp)	697
+# contigs (>= 50000 bp)	571
+Total length (>= 0 bp)	1145743091
+Total length (>= 1000 bp)	1145743091
+Total length (>= 5000 bp)	1127525158
+Total length (>= 10000 bp)	1124904458
+Total length (>= 25000 bp)	1121371807
+Total length (>= 50000 bp)	1116802477
+# contigs	10081
+Largest contig	20899748
+Total length	1145743091
+GC (%)	42.30
+N50	4689259
+N75	2284924
+L50	73
+L75	158
+# N's per 100 kbp	1647.29

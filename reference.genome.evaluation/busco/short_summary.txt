@@ -1,0 +1,35 @@
+# BUSCO version is: 5.4.4 
+# The lineage dataset is: aves_odb10 (Creation date: 2021-02-19, number of genomes: 62, number of BUSCOs: 8338)
+# Summarized benchmarking in BUSCO notation for file /panfs/pfs.local/work/bi/d669d153/todi.subset.2022/busco/Tchloris.1.fasta
+# BUSCO was run in mode: euk_genome_aug
+# Gene predictor used: augustus
+
+	***** Results: *****
+
+	C:95.9%[S:95.7%,D:0.2%],F:1.5%,M:2.6%,n:8338	   
+	7999	Complete BUSCOs (C)			   
+	7983	Complete and single-copy BUSCOs (S)	   
+	16	Complete and duplicated BUSCOs (D)	   
+	125	Fragmented BUSCOs (F)			   
+	214	Missing BUSCOs (M)			   
+	8338	Total BUSCO groups searched		   
+
+Assembly Statistics:
+	10081	Number of scaffolds
+	28857	Number of contigs
+	1145743091	Total length
+	1.647%	Percent gaps
+	4 MB	Scaffold N50
+	126 KB	Contigs N50
+
+
+Dependencies and versions:
+	hmmsearch: 3.1
+	bbtools: 39.01
+	makeblastdb: 2.13.0+
+	tblastn: 2.13.0+
+	augustus: 3.5.0
+	gff2gbSmallDNA.pl: None
+	new_species.pl: None
+	etraining: None
+	busco: 5.4.4
