@@ -4,7 +4,7 @@ Todiramphus RADseq project
 This repository will contain a comprehensive compilation of code and expalantory visualization associated with a paper on Todiramphus radseq data
 
 ### Reference genome quality assessment
-*   Quality info for our *de novo* assembled reference genome is available in the subdirectory called 'reference.genome.evaluation' including a detailed report on overall contiguity that can be viewed here:
+*   Quality info for our *de novo* assembled reference genome including [BUSCO](https://busco.ezlab.org/) completeness assessment is available in the subdirectory called 'reference.genome.evaluation'. A detailed report on overall contiguity from [QUAST](https://quast.sourceforge.net/) can be viewed here:
     > <https://devonderaad.github.io/todiramphus.radseq/reference.genome.evaluation/quast_results/results_2023_03_14_08_46_42/report.html> 
     
 ### Distribution and sampling mapping
