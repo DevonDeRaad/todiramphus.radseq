@@ -1,6 +1,8 @@
 Todiramphus RADseq project
 ==================================================================================
 
+[![DOI](https://zenodo.org/badge/478182351.svg)](https://zenodo.org/badge/latestdoi/478182351)
+
 This repository contains a comprehensive compilation of code and expalanatory visualizations associated with the paper "Mitonuclear discordance results from incomplete lineage sorting, with no detectable evidence for gene flow, in a rapid radiation of *Todiramphus* kingfishers"
 
 ### Reproduce analyses from this paper
