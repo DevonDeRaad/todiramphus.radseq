@@ -1,7 +1,10 @@
 Todiramphus RADseq project
 ==================================================================================
 
-This repository will contain a comprehensive compilation of code and expalantory visualization associated with a paper on Todiramphus radseq data
+This repository contains a comprehensive compilation of code and expalanatory visualizations associated with the paper "Mitonuclear discordance results from incomplete lineage sorting, with no detectable evidence for gene flow, in a rapid radiation of *Todiramphus* kingfishers"
+
+### Reproduce analyses from this paper
+*   If you would like to reproduce any analyses from this paper start in the 'data' subdirectory (<https://github.com/DevonDeRaad/todiramphus.radseq/tree/main/data>) which will instruct you on exactly how to find the input dataset you're looking for. If you have further questions, I would be happy to hear from you at devonderaad[at]gmail.com.
 
 ### Reference genome quality assessment
 *   Quality info for our *de novo* assembled reference genome including [BUSCO](https://busco.ezlab.org/) completeness assessment is available in the subdirectory called 'reference.genome.evaluation'. A detailed report on overall contiguity from [QUAST](https://quast.sourceforge.net/) can be viewed here:
