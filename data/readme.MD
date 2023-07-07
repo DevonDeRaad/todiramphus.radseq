@@ -1,7 +1,7 @@
 Data for the manuscript 'Mitonuclear discordance results from incomplete lineage sorting, with no detectable evidence for gene flow, in a rapid radiation of Todiramphus kingfishers'.
 
 How to access input datasets to recreate all analyses performed in this paper:
-- Sample information for all 83 samples with RADseq data used in downstream analyses here can be found in the spreadsheet 'todi.retained.sampling.xlsx'.
+- Sample information for all 83 samples with RADseq data used in downstream analyses here can be found in the spreadsheet 'todi.retained.sampling.xlsx', where the column 'sample.id' corresponds to the name of each sample in the vcf file.
 - Mitogenome alignment used for pairwise distance matrix and phylogenetic reconstruction (Figures 4A & 4C) can be found in the subdirectory 'mitogenomes'.
 - Raw, unfiltered SNP dataset containing all 100 individual samples and 222,393 SNPs is named 'populations.snps.vcf.gz', and is available in the 'nuclear' folder.
 - Filtered SNP dataset set at an 85% per-SNP completeness threshold, containing 83 samples and 7,430 SNPs on 1,892 loci, is named 'todi.85.vcf.gz', and is available in the 'nuclear' folder. This dataset was used as input for SplitsTree4 (Fig. 2A), StAMPP (pairwise heatmap; Fig. 4B), Dsuite (Fig. 6A).
